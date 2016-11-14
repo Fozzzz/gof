@@ -37,7 +37,7 @@ public class GoodsDaoTest {
     }
     @Test
     public void test4(){
-        List<Goods>goodses=goodsDao.getGoods(1);
+        List<Goods>goodses=goodsDao.get(1);
         for (Goods g:goodses
              ) {
             System.out.println(g.getGoods_name());
