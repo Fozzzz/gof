@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-前端首
+前端首页
 </body>
 </html>
