@@ -15,7 +15,7 @@ public class Shop {
     private String shop_address;
     private Integer shop_tel;
     private String shop_content;
-    private List<Ware> wares;
+
 
     public Integer getShop_id() {
         return shop_id;
@@ -57,11 +57,4 @@ public class Shop {
         this.shop_content = shop_content;
     }
 
-    public List<Ware> getWares() {
-        return wares;
-    }
-
-    public void setWares(List<Ware> wares) {
-        this.wares = wares;
-    }
 }
