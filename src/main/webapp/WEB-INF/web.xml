@@ -29,11 +29,11 @@
     </filter>
     <filter-mapping>
         <filter-name>encodingFilter</filter-name>
-        <url-pattern>/api/*</url-pattern>
+        <url-pattern>/gof/*</url-pattern>
     </filter-mapping>
 
     <servlet>
-        <servlet-name>api</servlet-name>
+        <servlet-name>gof</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
@@ -43,8 +43,8 @@
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>api</servlet-name>
-        <url-pattern>/api/*</url-pattern>
+        <servlet-name>gof</servlet-name>
+        <url-pattern>/gof/*</url-pattern>
     </servlet-mapping>
 
 
