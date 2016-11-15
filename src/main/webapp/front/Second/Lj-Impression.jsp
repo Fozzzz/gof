@@ -4,18 +4,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>丽江古城--印象古城</title>
-<link href="../css/css.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="../js/jquery/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="../js/jquery/index_tab.js"></script>
-<script type="text/javascript" src="../js/jquery/left_roll.js"></script>
-<script type="text/javascript" src="../js/Page-loading.js"></script>  
-<script type="text/javascript" src="../js/Bb-tile.js"></script>
-<script type="text/javascript" src="../js/jquery/Lj-flash.js"></script>
+<link href="../../../assets/front/css/css.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="../../../assets/front/js/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/jquery/index_tab.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/jquery/left_roll.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/Page-loading.js"></script>  
+<script type="text/javascript" src="../../../assets/front/js/Bb-tile.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/jquery/Lj-flash.js"></script>
 </head>
 
 <body>
    <!--background picture begin-->
-   <div class="picture" id="picture"><img id="bgImg" src="../images/home_top_bg.jpg" height="742"></div>
+   <div class="picture" id="picture"><img id="bgImg" src="../../../assets/front/images/home_top_bg.jpg" height="742"></div>
    <!--background picture end-->
 
    <div class="total" id="total">
@@ -38,7 +38,7 @@
             <div class="w786">
             
              <!--title begin-->
-             <div class="Lj-news-title"><span><img src="../images/icon_06_03.jpg"/></span><div>丽江古城最真实的景区动态信息</div></div>
+             <div class="Lj-news-title"><span><img src="../../../assets/front/images/icon_06_03.jpg"/></span><div>丽江古城最真实的景区动态信息</div></div>
              <!--title end-->
              
              <!--impression begin-->
@@ -47,16 +47,16 @@
              
              <!--======================-->
                <div class="impression-img">
-                   <div class="clickL"><img id="leftNav" src="../images/icon_03_01.png"/></div>
+                   <div class="clickL"><img id="leftNav" src="../../../assets/front/images/icon_03_01.png"/></div>
                    <div class="impression-con" id="Lj-flash">
                        <span id="Lj-img">
-                           <a href="javascript:"><img  src="../images/img_03_01.jpg"/></a>
-                           <a href="javascript:"><img  src="../images/img_03_02.jpg"/></a>
-                           <a href="javascript:"><img  src="../images/img_03_03.jpg"/></a>
-                           <a href="javascript:"><img  src="../images/img_03_04.jpg"/></a>
+                           <a href="javascript:"><img  src="../../../assets/front/images/img_03_01.jpg"/></a>
+                           <a href="javascript:"><img  src="../../../assets/front/images/img_03_02.jpg"/></a>
+                           <a href="javascript:"><img  src="../../../assets/front/images/img_03_03.jpg"/></a>
+                           <a href="javascript:"><img  src="../../../assets/front/images/img_03_04.jpg"/></a>
                        </span>
                    </div>
-                   <div class="clickR"><img id="rightNav" src="../images/icon_03_02.png"/></div>
+                   <div class="clickR"><img id="rightNav" src="../../../assets/front/images/icon_03_02.png"/></div>
                </div>
                <!--======================-->
                

@@ -4,12 +4,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>丽江古城--在线支付</title>
-<link href="../css/css.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="../js/jquery/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="../js/jquery/index_tab.js"></script>
-<script type="text/javascript" src="../js/jquery/left_roll.js"></script>
-<script type="text/javascript" src="../js/Page-loading.js"></script>  
-<script type="text/javascript" src="../js/Bb-tile.js"></script>
+<link href="../../../assets/front/css/css.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="../../../assets/front/js/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/jquery/index_tab.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/jquery/left_roll.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/Page-loading.js"></script>  
+<script type="text/javascript" src="../../../assets/front/js/Bb-tile.js"></script>
 <script type="text/javascript">
 function changeNum(obj,num){ 
 var input = getParent(obj).getElementsByTagName("input");
@@ -25,7 +25,7 @@ function getParent(obj){ if(typeof(obj) != "object")
 
 <body>
    <!--background picture begin-->
-   <div class="picture" id="picture"><img id="bgImg" src="../images/home_top_bg.jpg" height="742"></div>
+   <div class="picture" id="picture"><img id="bgImg" src="../../../assets/front/images/home_top_bg.jpg" height="742"></div>
    <!--background picture end-->
 
    <div class="total" id="total">

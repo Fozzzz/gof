@@ -4,17 +4,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>丽江古城--新闻列表</title>
-<link href="../css/css.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="../js/jquery/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="../js/jquery/index_tab.js"></script>
-<script type="text/javascript" src="../js/jquery/left_roll.js"></script>
-<script type="text/javascript" src="../js/Page-loading.js"></script>  
-<script type="text/javascript" src="../js/Bb-tile.js"></script>
+<link href="../../../assets/front/css/css.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="../../../assets/front/js/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/jquery/index_tab.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/jquery/left_roll.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/Page-loading.js"></script>  
+<script type="text/javascript" src="../../../assets/front/js/Bb-tile.js"></script>
 </head>
 
 <body>
    <!--background picture begin-->
-   <div class="picture" id="picture"><img id="bgImg" src="../images/home_top_bg.jpg" height="742"></div>
+   <div class="picture" id="picture"><img id="bgImg" src="../../../assets/front/images/home_top_bg.jpg" height="742"></div>
    <!--background picture end-->
 
    <div class="total" id="total">
@@ -37,7 +37,7 @@
             <div class="w786">
             
              <!--title begin-->
-             <div class="Lj-news-title"><span><img src="../images/icon_06_02.jpg"/></span><div>丽江古城最真实的景区动态信息</div></div>
+             <div class="Lj-news-title"><span><img src="../../../assets/front/images/icon_06_02.jpg"/></span><div>丽江古城最真实的景区动态信息</div></div>
              <!--title end-->
              
              <!--text begin-->
@@ -50,7 +50,7 @@
                       </dl>
                   </li>
                   <li>
-                      <span><a href="javascript:"><img src="../images/img_02_01.jpg"/></a></span>
+                      <span><a href="javascript:"><img src="../../../assets/front/images/img_02_01.jpg"/></a></span>
                       <dl>
                          <dt><a href="javascript:">积极开展巾帼志愿者服务活动</a></dt>
                          <dd>7月22日科室负责人、古城区、玉龙县相关部门职能职能负责科室负责人、古</dd>
@@ -75,34 +75,21 @@
                       </dl>
                   </li>
                   <li>
-                      <span><a href="javascript:"><img src="../images/img_02_01.jpg"/></a></span>
+                      <span><a href="javascript:"><img src="../../../assets/front/images/img_02_01.jpg"/></a></span>
                       <dl>
                          <dt><a href="javascript:">积极开展巾帼志愿者服务活动</a></dt>
                          <dd>7月22日，丽江古城保护管理局召集各科室负责人、古城区、玉龙县相关职能部门负责科室负责人、古城区、玉龙县相关职能部门负责科室负责人、古</dd>
                       </dl>
                   </li>
                   <li>
-                      <span><a href="javascript:"><img src="../images/img_02_01.jpg"/></a></span>
+                      <span><a href="javascript:"><img src="../../../assets/front/images/img_02_01.jpg"/></a></span>
                       <dl>
                          <dt><a href="javascript:">积极开展巾帼志愿者服务活动</a></dt>
                          <dd>7月22日，丽江古城保护管理局召集各科室负责人、古城区、玉龙县相关职能部门负责科室负责人、古城区、玉龙县相关职能部门负责科室负责人、古</dd>
                       </dl>
                   </li>
                   <li>
-                      <span><a href="javascript:"><img src="../images/img_02_01.jpg"/></a></span>
-                      <dl>
-                         <dt><a href="javascript:">积极开展巾帼志愿者服务活动</a></dt>
-                         <dd>7月22日，丽江古城保护管理局召集各科室负责人、古城区、玉龙县相关职能部门负责科室负责人、古城区、玉龙县相关职能部门负责科室负责人、古</dd>
-                      </dl>
-                  </li>
-                  <li>
-                      <dl>
-                         <dt><a href="javascript:">积极开展巾帼志愿者服务活动</a></dt>
-                         <dd>今年年初，我局向市妇联申请登记并注册成立了丽江古城保护管理局巾帼志愿服务队，有101名名今年年初，我局向市妇联申请登记并注册成立了丽江古城保护管理局巾帼志愿服务队，有101名名</dd>
-                      </dl>
-                  </li>
-                  <li>
-                      <span><a href="javascript:"><img src="../images/img_02_01.jpg"/></a></span>
+                      <span><a href="javascript:"><img src="../../../assets/front/images/img_02_01.jpg"/></a></span>
                       <dl>
                          <dt><a href="javascript:">积极开展巾帼志愿者服务活动</a></dt>
                          <dd>7月22日，丽江古城保护管理局召集各科室负责人、古城区、玉龙县相关职能部门负责科室负责人、古城区、玉龙县相关职能部门负责科室负责人、古</dd>
@@ -115,7 +102,7 @@
                       </dl>
                   </li>
                   <li>
-                      <span><a href="javascript:"><img src="../images/img_02_01.jpg"/></a></span>
+                      <span><a href="javascript:"><img src="../../../assets/front/images/img_02_01.jpg"/></a></span>
                       <dl>
                          <dt><a href="javascript:">积极开展巾帼志愿者服务活动</a></dt>
                          <dd>7月22日，丽江古城保护管理局召集各科室负责人、古城区、玉龙县相关职能部门负责科室负责人、古城区、玉龙县相关职能部门负责科室负责人、古</dd>
@@ -128,7 +115,20 @@
                       </dl>
                   </li>
                   <li>
-                      <span><a href="javascript:"><img src="../images/img_02_01.jpg"/></a></span>
+                      <span><a href="javascript:"><img src="../../../assets/front/images/img_02_01.jpg"/></a></span>
+                      <dl>
+                         <dt><a href="javascript:">积极开展巾帼志愿者服务活动</a></dt>
+                         <dd>7月22日，丽江古城保护管理局召集各科室负责人、古城区、玉龙县相关职能部门负责科室负责人、古城区、玉龙县相关职能部门负责科室负责人、古</dd>
+                      </dl>
+                  </li>
+                  <li>
+                      <dl>
+                         <dt><a href="javascript:">积极开展巾帼志愿者服务活动</a></dt>
+                         <dd>今年年初，我局向市妇联申请登记并注册成立了丽江古城保护管理局巾帼志愿服务队，有101名名今年年初，我局向市妇联申请登记并注册成立了丽江古城保护管理局巾帼志愿服务队，有101名名</dd>
+                      </dl>
+                  </li>
+                  <li>
+                      <span><a href="javascript:"><img src="../../../assets/front/images/img_02_01.jpg"/></a></span>
                       <dl>
                          <dt><a href="javascript:">积极开展巾帼志愿者服务活动</a></dt>
                          <dd>7月22日，丽江古城保护管理局召集各科室负责人、古城区、玉龙县相关职能部门负责科室负责人、古城区、玉龙县相关职能部门负责科室负责人、古</dd>

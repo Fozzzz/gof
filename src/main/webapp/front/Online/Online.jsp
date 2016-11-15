@@ -4,13 +4,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>丽江古城--在线支付</title>
-<link href="../css/css.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="../js/jquery/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="../js/jquery/index_tab.js"></script>
-<script type="text/javascript" src="../js/jquery/left_roll.js"></script>
+<link href="../../../assets/front/css/css.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="../../../assets/front/js/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/jquery/index_tab.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/jquery/left_roll.js"></script>
     <script type="text/javascript" src="js/change-tab.js"></script>
-<script type="text/javascript" src="../js/Page-loading.js"></script>  
-<script type="text/javascript" src="../js/Bb-tile.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/Page-loading.js"></script>  
+<script type="text/javascript" src="../../../assets/front/js/Bb-tile.js"></script>
 <script type="text/javascript">
 function changeAdd(){ 
      
@@ -56,7 +56,7 @@ function settlement(){
 
 <body>
    <!--background picture begin-->
-   <div class="picture" id="picture"><img id="bgImg" src="../images/home_top_bg.jpg" height="742"></div>
+   <div class="picture" id="picture"><img id="bgImg" src="../../../assets/front/images/home_top_bg.jpg" height="742"></div>
    <!--background picture end-->
 
    <div class="total" id="total">
@@ -92,14 +92,14 @@ function settlement(){
                 </dl>
                 <a href="javascript:">查询</a>
                </div>
-               <div class="online_img"><img src="../images/icon_08_13.jpg" width="653" height="385"/></div>
+               <div class="online_img"><img src="../../../assets/front/images/icon_08_13.jpg" width="653" height="385"/></div>
              </div>
             
             <div class="online_text">
               <h3>世界文化遗产丽江古城维护费</h3>
               <span class="online_span">金 额：80.00  元/人次</span>
-              <span class="online_span"><i>数 量：</i><a onclick="changeSub()" href="javascript:"><img src="../images/icon_08_14.jpg"/></a>
-              <input type="text" class="online_num" id="online" value="1"/><a onclick="changeAdd()" href="javascript:"><img src="../images/icon_08_15.jpg"/></a></span>
+              <span class="online_span"><i>数 量：</i><a onclick="changeSub()" href="javascript:"><img src="../../../assets/front/images/icon_08_14.jpg"/></a>
+              <input type="text" class="online_num" id="online" value="1"/><a onclick="changeAdd()" href="javascript:"><img src="../../../assets/front/images/icon_08_15.jpg"/></a></span>
               
               <dl>
                  <dt><p>取票电话</p><input type="text" class="online_check"/></dt>

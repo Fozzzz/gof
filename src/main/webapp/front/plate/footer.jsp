@@ -31,7 +31,7 @@
             ICP证:滇ICP备08101331号   地址:云南省丽江市古城区五一街文治巷72号<br/>
             技术支持：云南孚旭信息技术有限公司
         </div>
-        <div class="footer-img"><img src="../images/img_01_21.jpg"><img src="../images/img_01_22.jpg"></div>
+        <div class="footer-img"><img src="../../../assets/front/images/img_01_21.jpg"><img src="../../../assets/front/images/img_01_22.jpg"></div>
     </div>
 </div>
 
