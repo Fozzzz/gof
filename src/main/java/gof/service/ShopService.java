@@ -2,12 +2,12 @@ package gof.service;
 
 import gof.entity.Page;
 import gof.entity.Shop;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by Administrator on 2016/11/15.
  */
-@Service
+@Component
 public interface ShopService {
     /**
      * 通过id删除商家
