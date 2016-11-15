@@ -1,24 +1,17 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2016/11/14
-  Time: 9:57
-  内容界面，主要是table
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="row">
     <div class="Lj-option">
         <dl class="potion-style">
             <dt>区域：</dt>
-            <dd><a href="javascript:">大研古城</a><a href="javascript:">束河古镇</a><a href="javascript:">丽江新城</a></dd>
+            <dd><a href="javascript:">大研古城 </a><a href="javascript:">束河古镇 </a><a href="javascript:">丽江新城</a></dd>
         </dl>
         <dl class="potion-style">
             <dt>价格：</dt>
-            <dd><a href="javascript:">200元以下</a><a href="javascript:">200-400</a><a href="javascript:">400-600</a><a href="javascript:">600-800</a><a href="javascript:">800以上</a></dd>
+            <dd><a href="javascript:">200元以下 </a><a href="javascript:">200-400 </a><a href="javascript:">400-600 </a><a href="javascript:">600-800 </a><a href="javascript:">800以上</a></dd>
         </dl>
         <dl class="potion-style">
             <dt>设施：</dt>
-            <dd><a href="javascript:">免费WiFi</a><a href="javascript:">免费接机</a><a href="javascript:">免费电话</a><a href="javascript:">会议室</a><a href="javascript:">停车场</a><a href="javascript:">咖啡厅/酒吧</a></dd>
+            <dd><a href="javascript:">免费WiFi </a><a href="javascript:">免费接机 </a><a href="javascript:">免费电话 </a><a href="javascript:">会议室 </a><a href="javascript:">停车场 </a><a href="javascript:">咖啡厅/酒吧</a></dd>
         </dl>
         <dl class="potion-style condition">
             <dt><span class="potion-term">筛选条件</span><i class="potin-f">></i></dt>
