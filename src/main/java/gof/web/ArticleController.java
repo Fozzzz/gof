@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ArticleController {
     @Autowired
-    private ArticleDao articleDao;
-    @RequestMapping("/post")
-    public String post(Article article){
-        articleDao.post(article);
+    private ArticleController articleController;
+    @RequestMapping("/getAll")
+    public String getAll(){
+        articleController.getAll();
         return "index";
     }
 }
