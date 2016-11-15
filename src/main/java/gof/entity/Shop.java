@@ -1,6 +1,7 @@
 package gof.entity;
 
 import gof.entity.Goods.Goods;
+import gof.entity.Ware.Ware;
 
 import java.util.List;
 
@@ -14,54 +15,53 @@ public class Shop {
     private String shop_address;
     private Integer shop_tel;
     private String shop_content;
+    private List<Ware> wares;
 
-    private List<Goods> goodsList;
-
-    public Integer getshop_id() {
+    public Integer getShop_id() {
         return shop_id;
     }
 
-    public void setshop_id(Integer shop_id) {
+    public void setShop_id(Integer shop_id) {
         this.shop_id = shop_id;
     }
 
-    public String getshop_name() {
+    public String getShop_name() {
         return shop_name;
     }
 
-    public void setshop_name(String shop_name) {
+    public void setShop_name(String shop_name) {
         this.shop_name = shop_name;
     }
 
-    public String getshop_address() {
+    public String getShop_address() {
         return shop_address;
     }
 
-    public void setshop_address(String shop_address) {
+    public void setShop_address(String shop_address) {
         this.shop_address = shop_address;
     }
 
-    public Integer getshop_tel() {
+    public Integer getShop_tel() {
         return shop_tel;
     }
 
-    public void setshop_tel(Integer shop_tel) {
+    public void setShop_tel(Integer shop_tel) {
         this.shop_tel = shop_tel;
     }
 
-    public String getshop_content() {
+    public String getShop_content() {
         return shop_content;
     }
 
-    public void setshop_content(String shop_content) {
+    public void setShop_content(String shop_content) {
         this.shop_content = shop_content;
     }
 
-    public List<Goods> getGoodsList() {
-        return goodsList;
+    public List<Ware> getWares() {
+        return wares;
     }
 
-    public void setGoodsList(List<Goods> goodsList) {
-        this.goodsList = goodsList;
+    public void setWares(List<Ware> wares) {
+        this.wares = wares;
     }
 }
