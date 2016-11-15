@@ -10,7 +10,7 @@
 <head>
     <title>丽江古城后台管理</title>
     <link rel="shortcut icon" href="tnote.ico" type="image/x-icon" />
-    <base href="/">
+
     <jsp:include page="resource.jsp"/>
 </head>
 <body class="page-header-fixed page-sidebar-closed-hide-logo">

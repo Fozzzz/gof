@@ -1,6 +1,6 @@
 package gof.dao;
 
-import gof.entity.Goods.Goods;
+import gof.entity.Ware.Ware;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,31 +14,31 @@ import java.util.List;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/spring.xml")
-public class GoodsDaoTest {
+public class WareDaoTest {
     @Autowired
-    private GoodsDao goodsDao;
+    private WareDao wareDao;
     @Test
     public void test(){
-        Goods goods=new Goods(null,"测试",100.0,"丽江","12345678901","......",4);
-        int i=goodsDao.post(goods);
+        Ware ware =new Ware(null,"测试",100.0,"丽江","12345678901","......",4);
+        int i= wareDao.post(ware);
         System.out.println(i);
     }
     @Test
     public void test2(){
-        Goods goods=new Goods(13,"测试2",100.0,"丽江","12345678901","......1",4);
-        int i=goodsDao.put(goods);
+        Ware ware =new Ware(13,"测试2",100.0,"丽江","12345678901","......1",4);
+        int i= wareDao.put(ware);
         System.out.println(i);
     }
     @Test
     public void test3(){
-        Goods goods=new Goods();
-        goods.setGoods_id(14);
-        int i=goodsDao.delete(goods);
+        Ware ware =new Ware();
+        ware.setGoods_id(14);
+        int i= wareDao.delete(ware);
     }
     @Test
     public void test4(){
-        List<Goods>goodses=goodsDao.get(1);
-        for (Goods g:goodses
+        List<Ware>goodses= wareDao.get(1);
+        for (Ware g:goodses
              ) {
             System.out.println(g.getGoods_name());
         }
