@@ -9,9 +9,8 @@
 <html>
 <head>
     <title>丽江古城后台管理</title>
-    <link rel="shortcut icon" href="tnote.ico" type="image/x-icon" />
-
-    <jsp:include page="resource.jsp"/>
+    <link rel="shortcut icon" href="../asserts/img/tnote.ico" type="image/x-icon" />
+    <jsp:include page="back/resource.jsp"/>
 </head>
 <body class="page-header-fixed page-sidebar-closed-hide-logo">
 
@@ -127,8 +126,8 @@
     <div class="container-fluid">
         <%--内容--%>
         <div class="page-content">
-            <jsp:include page="article_list.jsp"/>
-            <jsp:include page="article_add.jsp"/>
+            <jsp:include page="back/article_list.jsp"/>
+            <jsp:include page="back/article_add.jsp"/>
             <div class="clearfix"></div>
         </div>
         <%--版权信息--%>
@@ -139,7 +138,6 @@
         </a>
     </div>
 </div>
-
 
 </body>
 </html>

@@ -3,7 +3,7 @@
   User: Administrator
   Date: 2016/11/14
   Time: 9:57
-  内容界面，主要是table
+  添加文章
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="row">
@@ -21,41 +21,34 @@
                 </div>
             </div>
             <div class="portlet-body form">
-                <form role="form">
+                <form>
                     <div class="form-body">
-                        <div class="form-group has-success">
-                            <label class="control-label">标题</label>
-                            <input type="text" class="form-control" id="inputSuccess"></div>
-                        <div class="form-group has-success">
-                            <label class="control-label">内容</label>
-                            <div class="portlet-body form">
-                                <form class="form-horizontal form-bordered">
-                                    <div class="form-body">
-                                        <div class="form-group last">
-                                            <label class="control-label col-md-2">Default Editor</label>
-                                            <div class="col-md-10">
-                                                <div name="summernote" id="summernote_1"> </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-actions">
-                                        <div class="row">
-                                            <div class="col-md-offset-2 col-md-10">
-                                                <button type="submit" class="btn green">
-                                                    <i class="fa fa-check"></i> Submit</button>
-                                                <button type="button" class="btn default">Cancel</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                    </div>
-                    <div class="form-actions right">
-                        <button type="button" class="btn default">返回</button>
-                        <button type="submit" class="btn red">确定</button>
+
+                        <label class="control-label">标题</label>
+                        <input type="text" class="form-control">
+                        <label class="control-label">内容</label>
+                        <div id="editor"></div>
+                        <label class="control-label">时间</label>
+                        <div class="input-group input-medium date date-picker" data-date-format="yyyy-mm-dd"
+                             data-date-start-date="+0d">
+                            <input type="text" class="form-control" readonly="">
+                                                        <span class="input-group-btn">
+                                                            <button class="btn default" type="button">
+                                                                <i class="fa fa-calendar"></i>
+                                                            </button>
+                                                        </span>
+                        </div>
+                        <div class="form-actions right">
+                            <button type="button" class="btn default">返回</button>
+                            <button type="submit" class="btn red">确定</button>
+                        </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    $('#editor').summernote({height: 450, lang: 'zh-CN'});
+</script>

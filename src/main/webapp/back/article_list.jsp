@@ -42,7 +42,7 @@
                         </td>
                         <td class="hidden-xs"> 这是内容</td>
                         <td> 2016-11-14 </td>
-                        <td> <img src="tnote.ico" height="50px" width="50px"> </td>
+                        <td> <img src="../assets/img/tnote.ico" height="50px" width="50px"> </td>
                         <td>
                             <a href="javascript:;" class="btn btn-outline btn-circle btn-sm purple">
                                 <i class="fa fa-edit"></i> 编辑 </a>
@@ -97,7 +97,7 @@
                         </td>
                         <td class="hidden-xs"> 这是内容</td>
                         <td> 2016-11-14 </td>
-                        <td> <img src="tnote.ico" height="50px" width="50px"> </td>
+                        <td> <img src="../assets/img/tnote.ico" height="50px" width="50px"> </td>
                         <td>
                             <a href="javascript:;" class="btn btn-outline btn-circle btn-sm purple">
                                 <i class="fa fa-edit"></i> 编辑 </a>

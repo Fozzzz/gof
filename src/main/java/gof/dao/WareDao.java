@@ -14,13 +14,13 @@ import java.util.List;
  */
 @Component
 public interface WareDao {
-    @Delete("delete from ware where goods_id=#{goods_id}")
+    @Delete("delete from ware where ware_id=#{ware_id}")
     int delete(Ware ware);
-    @Update("update ware set goods_name=#{goods_name},goods_price=#{goods_price},goods_address=#{goods_address},goods_phone=#{goods_phone},goods_total=#{goods_total},goods_typeid=#{goods_typeid},bed=#{bed},breakfast=#{breakfast},wifi=#{wifi},gift=#{gift} where goods_id=#{goods_id}")
+    @Update("update ware set ware_name=#{ware_name},ware_price=#{ware_price},ware_address=#{ware_address},ware_phone=#{ware_phone},ware_total=#{ware_total},ware_typeid=#{ware_typeid},bed=#{bed},breakfast=#{breakfast},wifi=#{wifi},gift=#{gift} where ware_id=#{ware_id}")
     int put(Ware ware);
-    @Insert("insert into ware(goods_name,goods_price,goods_address,goods_phone,goods_total,goods_typeid,bed,breakfast,wifi,gift) values(#{goods_name},#{goods_price},#{goods_address},#{goods_phone},#{goods_total},#{goods_typeid},#{bed},#{breakfast},#{wifi},#{gift})")
+    @Insert("insert into ware(ware_name,ware_price,ware_address,ware_phone,ware_total,ware_typeid,bed,breakfast,wifi,gift) values(#{ware_name},#{ware_price},#{ware_address},#{ware_phone},#{ware_total},#{ware_typeid},#{bed},#{breakfast},#{wifi},#{gift})")
     int post(Ware ware);
-    @Select("select *from goods where goods_typeid=#{goods_typeid}")
-    List<Ware> get(int goods_typeid);
+    @Select("select *from ware where ware_typeid=#{ware_typeid}")
+    List<Ware> get(int ware_typeid);
 
 }
