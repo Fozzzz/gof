@@ -17,7 +17,7 @@ public class ShopController {
     @Autowired
     private ShopService shopService;
 
-    @RequestMapping("/get")
+    @RequestMapping("/get.do")
     public String get(Page page, Model model){
         page=shopService.get(page);
         model.addAttribute("page",page);
