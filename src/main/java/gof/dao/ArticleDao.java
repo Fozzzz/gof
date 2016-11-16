@@ -1,8 +1,11 @@
 package gof.dao;
 
 import gof.entity.Article;
+import gof.entity.ArticleType;
+import gof.entity.Page;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Component;
 
@@ -19,6 +22,8 @@ public interface ArticleDao {
     int put(Article article);
     @Insert("insert into article(article_title,article_content,article_date) values(#{article_title},#{article_content},#{article_date})")
     int post(Article article);
+    @Select("select * from article")
     ArrayList<Article> getArticles();
+    @Select("select * from article where article_id=#{article_id}")
     Article getArticle(Article article);
 }

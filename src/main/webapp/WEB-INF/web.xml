@@ -44,7 +44,7 @@
 
     <servlet-mapping>
         <servlet-name>gof</servlet-name>
-        <url-pattern>/gof/*</url-pattern>
+        <url-pattern>*.do</url-pattern>
     </servlet-mapping>
 
 
