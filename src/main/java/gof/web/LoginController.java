@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class LoginController {
-    @RequestMapping("/login")
+    @RequestMapping("/login.do")
     public String login(User user){
         String result=null;
         System.out.println(user.getUsername());
         if (user.getUsername().equals("sirenbang")&&user.getPassword().equals("123456")){
-            result="../back/frame";
+            result="/frame";
         }else {
-            result="../back/error";
+            result="/error";
         }
         return result;
     }

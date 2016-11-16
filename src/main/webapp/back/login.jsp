@@ -58,7 +58,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- BEGIN LOGIN -->
         <div class="content">
             <!-- BEGIN LOGIN FORM -->
-            <form class="login-form" action="/gof/login" method="post\">
+            <form class="login-form" action="/login.do" method="post\">
                 <div class="form-title">
                     <span class="form-title">欢迎你.</span>
                     <span class="form-subtitle">请登录.</span>

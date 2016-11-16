@@ -52,7 +52,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <h2>抱歉，我们发生了一个错误</h2>
             <p> 实际上，可能您输入的用户名或密码有错误。 </p>
             <p>
-                <a href="login.jsp" class="btn red btn-outline"> 返回登录 </a>
+                <a href="back/login.jsp" class="btn red btn-outline"> 返回登录 </a>
                 <br> </p>
         </div>
         <!--[if lt IE 9]>
