@@ -13,19 +13,22 @@
                 <form>
                     <div class="form-body">
                         <label class="control-label">标题</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" value="${article.article_title}">
                         <label class="control-label">类型</label>
-                        <select class="form-control">
-                            <option>1</option>
+                        <select class="form-control" >
+                            <option selected>1</option>
                             <option>2</option>
                             <option>3</option>
                         </select>
+                        <script>
+                            $("select").val(${article.article_title});
+                        </script>
                         <label class="control-label">内容</label>
                         <div id="editor"></div>
                         <label class="control-label">时间</label>
                         <div class="input-group input-medium date date-picker" data-date-format="yyyy-mm-dd"
                              data-date-start-date="+0d">
-                            <input type="text" class="form-control" readonly="">
+                            <input type="text" class="form-control" readonly="" value="${article.article_date}">
                                                         <span class="input-group-btn">
                                                             <button class="btn default" type="button">
                                                                 <i class="fa fa-calendar"></i>
@@ -45,4 +48,5 @@
 
 <script>
     $('#editor').summernote({height: 450, lang: 'zh-CN'});
+    $('#edit_editor').code("${article.article_content}");
 </script>

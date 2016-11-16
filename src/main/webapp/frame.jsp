@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -62,15 +64,15 @@
                 <div class="nav-collapse collapse navbar-collapse navbar-responsive-collapse">
                     <ul class="nav navbar-nav">
                         <li class="dropdown dropdown-fw  active open selected">
-                            <a href="javascript:;" class="text-uppercase">
+                            <a href="getArticles.do" class="text-uppercase">
                                 <i class="icon-home"></i> 文章管理 </a>
                             <ul class="dropdown-menu dropdown-menu-fw">
-                                <li class="active">
-                                    <a href="article_list.html">
+                                <li <c:if test="${subpage.equals('article_list')}">class="active"</c:if>>
+                                    <a href="getArticles.do">
                                         <i class="icon-bar-chart"></i> 文章列表 </a>
                                 </li>
-                                <li>
-                                    <a href="article_add.html">
+                                <li <c:if test="${subpage.equals('article_add')}">class="active"</c:if>>
+                                    <a href="postArticle.do">
                                         <i class="icon-bulb"></i> 添加文章 </a>
                                 </li>
                             </ul>
@@ -126,8 +128,7 @@
     <div class="container-fluid">
         <%--内容--%>
         <div class="page-content">
-            <jsp:include page="back/article_list.jsp"/>
-            <jsp:include page="back/article_add.jsp"/>
+            <jsp:include page="back/${subpage}.jsp"/>
             <div class="clearfix"></div>
         </div>
         <%--版权信息--%>
