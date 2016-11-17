@@ -58,7 +58,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- BEGIN LOGIN -->
         <div class="content">
             <!-- BEGIN LOGIN FORM -->
-            <form class="login-form" action="/login.do" method="post">
+            <form class="login-form" action="/gof/login.do" method="post">
                 <div class="form-title">
                     <span class="form-title">欢迎你.</span>
                     <span class="form-subtitle">请登录.</span>
@@ -108,7 +108,7 @@ License: You must have a valid license purchased only from themeforest(the above
             </form>
             <!-- END LOGIN FORM -->
             <!-- BEGIN FORGOT PASSWORD FORM -->
-            <form class="forget-form" action="index.html" method="post">
+            <form class="forget-form" action="login.jsp" method="post">
                 <div class="form-title">
                     <span class="form-title">忘记密码 ?</span>
                     <span class="form-subtitle">输入你的邮箱重置密码.</span>

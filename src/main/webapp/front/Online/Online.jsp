@@ -100,7 +100,8 @@ function settlement(){
               <span class="online_span">金 额：80.00  元/人次</span>
               <span class="online_span"><i>数 量：</i><a onclick="changeSub()" href="javascript:"><img src="../../../assets/front/images/icon_08_14.jpg"/></a>
               <input type="text" class="online_num" id="online" value="1"/><a onclick="changeAdd()" href="javascript:"><img src="../../../assets/front/images/icon_08_15.jpg"/></a></span>
-              
+
+                <form action=""
               <dl>
                  <dt><p>取票电话</p><input type="text" class="online_check"/></dt>
                  <dd><em>取票时请出示该电话及其中一位缴纳人证件原件</em></dd>

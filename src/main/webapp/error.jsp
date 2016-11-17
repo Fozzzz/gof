@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.5
 Version: 4.5.2
@@ -46,7 +47,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <body class=" page-404-3">
         <div class="page-inner">
-            <img src="../../assets/pages/media/pages/earth-rtl.jpg" class="img-responsive" alt=""> </div>
+            <%--<img src="../../assets/pages/media/pages/earth-rtl.jpg" class="img-responsive" alt=""> </div>--%>
         <div class="container error-404">
             <h1>404</h1>
             <h2>抱歉，我们发生了一个错误</h2>

@@ -7,127 +7,116 @@ public class Ware {
     private Integer ware_id;
     private String ware_name;
     private double ware_price;
-    private String ware_address;
-    private String ware_phone;
-    private String ware_total;
+    private Integer ware_shopid;
     private Integer ware_typeid;
-    private String bed;
-    private String breakfast;
-    private String wifi;
-    private String gift;
+    private String ware_picture;
+    private String ware_bed;
+    private String ware_breakfast;
+    private String ware_wifi;
+    private String ware_gift;
 
     public Ware() {
     }
 
-    public Ware(Integer ware_id, String ware_name, double ware_price, String ware_address, String ware_phone, String ware_total, Integer ware_typeid) {
+    public Ware(Integer ware_id, String ware_name, double ware_price, Integer ware_shopid, Integer ware_typeid, String ware_picture) {
         this.ware_id = ware_id;
         this.ware_name = ware_name;
         this.ware_price = ware_price;
-        this.ware_address = ware_address;
-        this.ware_phone = ware_phone;
-        this.ware_total = ware_total;
+        this.ware_shopid = ware_shopid;
         this.ware_typeid = ware_typeid;
+        this.ware_picture = ware_picture;
     }
 
-    public Ware(Integer ware_id, String ware_name, double ware_price, String ware_address, String ware_phone, String ware_total, Integer ware_typeid, String bed, String breakfast, String wifi, String gift) {
+    public String getWare_picture() {
+        return ware_picture;
+    }
+
+    public void setWare_picture(String ware_picture) {
+        this.ware_picture = ware_picture;
+    }
+
+    public Ware(Integer ware_id, String ware_name, double ware_price, Integer ware_shopid, Integer ware_typeid, String ware_picture, String ware_bed, String ware_breakfast, String ware_wifi, String ware_gift) {
         this.ware_id = ware_id;
         this.ware_name = ware_name;
         this.ware_price = ware_price;
-        this.ware_address = ware_address;
-        this.ware_phone = ware_phone;
-        this.ware_total = ware_total;
+        this.ware_shopid = ware_shopid;
         this.ware_typeid = ware_typeid;
-        this.bed = bed;
-        this.breakfast = breakfast;
-        this.wifi = wifi;
-        this.gift = gift;
+        this.ware_picture = ware_picture;
+        this.ware_bed = ware_bed;
+        this.ware_breakfast = ware_breakfast;
+        this.ware_wifi = ware_wifi;
+        this.ware_gift = ware_gift;
     }
 
-    public Integer getware_id() {
+    public Integer getWare_id() {
         return ware_id;
     }
 
-    public void setware_id(Integer ware_id) {
+    public void setWare_id(Integer ware_id) {
         this.ware_id = ware_id;
     }
 
-    public String getware_name() {
+    public String getWare_name() {
         return ware_name;
     }
 
-    public void setware_name(String ware_name) {
+    public void setWare_name(String ware_name) {
         this.ware_name = ware_name;
     }
 
-    public double getware_price() {
+    public double getWare_price() {
         return ware_price;
     }
 
-    public void setware_price(double ware_price) {
+    public void setWare_price(double ware_price) {
         this.ware_price = ware_price;
     }
 
-    public String getware_address() {
-        return ware_address;
+    public Integer getWare_shopid() {
+        return ware_shopid;
     }
 
-    public void setware_address(String ware_address) {
-        this.ware_address = ware_address;
+    public void setWare_shopid(Integer ware_shopid) {
+        this.ware_shopid = ware_shopid;
     }
 
-    public String getware_phone() {
-        return ware_phone;
-    }
-
-    public void setware_phone(String ware_phone) {
-        this.ware_phone = ware_phone;
-    }
-
-    public String getware_total() {
-        return ware_total;
-    }
-
-    public void setware_total(String ware_total) {
-        this.ware_total = ware_total;
-    }
-
-    public Integer getware_typeid() {
+    public Integer getWare_typeid() {
         return ware_typeid;
     }
 
-    public void setware_typeid(Integer ware_typeid) {
+    public void setWare_typeid(Integer ware_typeid) {
         this.ware_typeid = ware_typeid;
     }
 
-    public String getBed() {
-        return bed;
+    public String getWare_bed() {
+        return ware_bed;
     }
 
-    public void setBed(String bed) {
-        this.bed = bed;
+    public void setWare_bed(String ware_bed) {
+        this.ware_bed = ware_bed;
     }
 
-    public String getBreakfast() {
-        return breakfast;
+    public String getWare_breakfast() {
+        return ware_breakfast;
     }
 
-    public void setBreakfast(String breakfast) {
-        this.breakfast = breakfast;
+    public void setWare_breakfast(String ware_breakfast) {
+        this.ware_breakfast = ware_breakfast;
     }
 
-    public String getWifi() {
-        return wifi;
+    public String getWare_wifi() {
+        return ware_wifi;
     }
 
-    public void setWifi(String wifi) {
-        this.wifi = wifi;
+    public void setWare_wifi(String ware_wifi) {
+        this.ware_wifi = ware_wifi;
     }
 
-    public String getGift() {
-        return gift;
+    public String getWare_gift() {
+        return ware_gift;
     }
 
-    public void setGift(String gift) {
-        this.gift = gift;
+    public void setWare_gift(String ware_gift) {
+        this.ware_gift = ware_gift;
     }
 }
