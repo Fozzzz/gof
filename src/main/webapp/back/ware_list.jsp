@@ -62,9 +62,9 @@
                         <td> </td>
                         <td> <img src=${wareware.ware_picture} height="50px" width="50px"> </td>
                         <td>
-                            <a href="javascript:;" class="btn btn-outline btn-circle btn-sm purple">
+                            <a href="getWare.do?ware_id=${wareware.ware_id}" class="btn btn-outline btn-circle btn-sm purple">
                                 <i class="fa fa-edit"></i> 编辑 </a>
-                            <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+                            <a href="deleteWare.do?ware_id=${wareware.ware_id}" class="btn btn-outline btn-circle dark btn-sm black">
                                 <i class="fa fa-trash-o"></i> 删除 </a>
                         </td>
                     </tr>
@@ -123,9 +123,9 @@
                         <td> </td>
                         <td> <img src=${foodware.ware_picture} height="50px" width="50px"> </td>
                         <td>
-                            <a href="javascript:;" class="btn btn-outline btn-circle btn-sm purple">
+                            <a href="getWare.do?ware_id=${foodware.ware_id}" class="btn btn-outline btn-circle btn-sm purple">
                                 <i class="fa fa-edit"></i> 编辑 </a>
-                            <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+                            <a href="deleteWare.do?ware_id=${fodware.ware_id}" class="btn btn-outline btn-circle dark btn-sm black">
                                 <i class="fa fa-trash-o"></i> 删除 </a>
                         </td>
                     </tr>
@@ -182,9 +182,9 @@
                         <td> </td>
                         <td> <img src=${barware.ware_picture} height="50px" width="50px"> </td>
                         <td>
-                            <a href="javascript:;" class="btn btn-outline btn-circle btn-sm purple">
+                            <a href="getWare.do?ware_id=${barware.ware_id}" class="btn btn-outline btn-circle btn-sm purple">
                                 <i class="fa fa-edit"></i> 编辑 </a>
-                            <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+                            <a href="deleteWare.do?ware_id=${barware.ware_id}" class="btn btn-outline btn-circle dark btn-sm black">
                                 <i class="fa fa-trash-o"></i> 删除 </a>
                         </td>
                     </tr>
@@ -249,9 +249,9 @@
                         <td> ${stayware.ware_gift}</td>
                         <td> <img src=${stayware.ware_picture} height="50px" width="50px"> </td>
                         <td>
-                            <a href="javascript:;" class="btn btn-outline btn-circle btn-sm purple">
+                            <a href="getWare.do?ware_id=${stayware.ware_id}" class="btn btn-outline btn-circle btn-sm purple">
                                 <i class="fa fa-edit"></i> 编辑 </a>
-                            <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+                            <a href="deleteWare.do?ware_id=${stayware.ware_id}" class="btn btn-outline btn-circle dark btn-sm black">
                                 <i class="fa fa-trash-o"></i> 删除 </a>
                         </td>
                     </tr>
