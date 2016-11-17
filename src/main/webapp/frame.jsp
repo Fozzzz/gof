@@ -50,14 +50,19 @@
                         <div class="btn-group-img btn-group">
                             <button type="button" class="btn btn-sm dropdown-toggle" data-toggle="dropdown"
                                     data-hover="dropdown" data-close-others="true">
-                                <span>你好,管理员</span>
+                                <span>你好,${admin}</span>
                                 <%--管理员头像--%>
                                 <img src="../assets/layouts/layout5/img/avatar1.jpg" alt=""></button>
                         </div>
                         <%--退出按钮--%>
-                        <button type="button" class="quick-sidebar-toggler" data-toggle="collapse">
+                        <button class="quick-sidebar-toggler" data-toggle="collapse" onclick="logout()">
                             <i class="icon-logout"></i>
                         </button>
+                        <script>
+                            function logout(){
+                                location.href="logout.do";
+                            }
+                        </script>
                     </div>
                 </div>
                 <%--功能模块列表--%>
