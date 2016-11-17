@@ -22,5 +22,7 @@ public interface WareDao {
     int post(Ware ware);
     @Select("select *from ware where ware_typeid=#{ware_typeid}")
     List<Ware> get(int ware_typeid);
+    @Select("select *from ware where shop_id=#{shop_id}")
+    List<Ware> getByShopId(int shop_id);
 
 }

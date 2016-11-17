@@ -47,7 +47,7 @@ public class ShopServiceTest {
         page.setPageNumber(5);
         page.setCurrentPage(1);
         page = shopService.get(page);
-        Assert.assertEquals(4, page.getList().size());
+        Assert.assertEquals(5, page.getList().size());
     }
 
 }
