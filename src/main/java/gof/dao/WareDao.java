@@ -16,9 +16,9 @@ import java.util.List;
 public interface WareDao {
     @Delete("delete from ware where ware_id=#{ware_id}")
     int delete(Ware ware);
-    @Update("update ware set ware_name=#{ware_name},ware_price=#{ware_price},ware_address=#{ware_address},ware_phone=#{ware_phone},ware_total=#{ware_total},ware_typeid=#{ware_typeid},bed=#{bed},breakfast=#{breakfast},wifi=#{wifi},gift=#{gift} where ware_id=#{ware_id}")
+    @Update("update ware set ware_name=#{ware_name},ware_price=#{ware_price},ware_shopid=#{ware_shopid},ware_typeid=#{ware_typeid},ware_bed=#{ware_bed},ware_breakfast=#{ware_breakfast},ware_wifi=#{ware_wifi},ware_gift=#{ware_gift} where ware_id=#{ware_id}")
     int put(Ware ware);
-    @Insert("insert into ware(ware_name,ware_price,ware_address,ware_phone,ware_total,ware_typeid,bed,breakfast,wifi,gift) values(#{ware_name},#{ware_price},#{ware_address},#{ware_phone},#{ware_total},#{ware_typeid},#{bed},#{breakfast},#{wifi},#{gift})")
+    @Insert("insert into ware(ware_name,ware_price,ware_shopid,ware_typeid,ware_bed,ware_breakfast,ware_wifi,ware_gift) values(#{ware_name},#{ware_price},#{ware_shopid},#{ware_typeid},#{ware_bed},#{ware_breakfast},#{ware_wifi},#{ware_gift})")
     int post(Ware ware);
     @Select("select *from ware where ware_typeid=#{ware_typeid}")
     List<Ware> get(int ware_typeid);
