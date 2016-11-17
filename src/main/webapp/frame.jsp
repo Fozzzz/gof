@@ -77,7 +77,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown dropdown-fw  ">
+                        <li class="dropdown dropdown-fw active open selected ">
                             <a href="javascript:;" class="text-uppercase">
                                 <i class="icon-puzzle"></i> 商家管理 </a>
                             <ul class="dropdown-menu dropdown-menu-fw">
@@ -91,21 +91,21 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown dropdown-fw  ">
+                        <li class="dropdown dropdown-fw active open selected ">
                             <a href="javascript:;" class="text-uppercase">
                                 <i class="icon-puzzle"></i> 商品管理 </a>
                             <ul class="dropdown-menu dropdown-menu-fw">
-                                <li class="active">
-                                    <a href="article_list.html">
+                                <li <c:if test="${subpage.equals('ware_list')}">class="active"</c:if>>
+                                    <a href="getWares.do">
                                         <i class="icon-bar-chart"></i> 商品列表 </a>
                                 </li>
-                                <li>
-                                    <a href="article_add.html">
+                                <li <c:if test="${subpage.equals('ware_add')}">class="active"</c:if>>
+                                    <a href="postWare.do">
                                         <i class="icon-bulb"></i> 添加商品 </a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown dropdown-fw  ">
+                        <li class="dropdown dropdown-fw active open selected ">
                             <a href="javascript:;" class="text-uppercase">
                                 <i class="icon-puzzle"></i> 订单管理 </a>
                             <ul class="dropdown-menu dropdown-menu-fw">
