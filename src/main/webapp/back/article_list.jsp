@@ -1,4 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -6,7 +8,6 @@
   Time: 9:57
   内容界面，主要是table
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="row">
     <!--丽江维护费-->
     <div class="portlet">
@@ -27,6 +28,9 @@
                             <i class="fa fa-user"></i> 内容
                         </th>
                         <th>
+                            <i class="fa fa-shopping-cart"></i>类型
+                        </th>
+                        <th>
                             <i class="fa fa-shopping-cart"></i>发布时间
                         </th>
                         <th>
@@ -43,7 +47,10 @@
                                 <a href="javascript:;"> ${temp.article_title} </a>
                             </td>
                             <td class="hidden-xs"> ${temp.article_content}</td>
-                            <td> ${temp.article_date} </td>
+                            <td class="hidden-xs"> ${temp.articleType_id}</td>
+                            <td>
+                                <fmt:formatDate type="date" value="${temp.article_date}" />
+                             </td>
                             <td> <img src="../assets/img/tnote.ico" height="50px" width="50px"> </td>
                             <td>
                                 <a href="getArticle.do?article_id=${temp.article_id}" class="btn btn-outline btn-circle btn-sm purple">

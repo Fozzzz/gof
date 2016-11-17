@@ -50,14 +50,19 @@
                         <div class="btn-group-img btn-group">
                             <button type="button" class="btn btn-sm dropdown-toggle" data-toggle="dropdown"
                                     data-hover="dropdown" data-close-others="true">
-                                <span>你好,管理员</span>
+                                <span>你好,${admin}</span>
                                 <%--管理员头像--%>
                                 <img src="../assets/layouts/layout5/img/avatar1.jpg" alt=""></button>
                         </div>
                         <%--退出按钮--%>
-                        <button type="button" class="quick-sidebar-toggler" data-toggle="collapse">
+                        <button class="quick-sidebar-toggler" data-toggle="collapse" onclick="logout()">
                             <i class="icon-logout"></i>
                         </button>
+                        <script>
+                            function logout(){
+                                location.href="logout.do";
+                            }
+                        </script>
                     </div>
                 </div>
                 <%--功能模块列表--%>
@@ -77,7 +82,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown dropdown-fw  ">
+                        <li class="dropdown dropdown-fw active open selected ">
                             <a href="javascript:;" class="text-uppercase">
                                 <i class="icon-puzzle"></i> 商家管理 </a>
                             <ul class="dropdown-menu dropdown-menu-fw">
@@ -91,21 +96,21 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown dropdown-fw  ">
+                        <li class="dropdown dropdown-fw active open selected ">
                             <a href="javascript:;" class="text-uppercase">
                                 <i class="icon-puzzle"></i> 商品管理 </a>
                             <ul class="dropdown-menu dropdown-menu-fw">
-                                <li class="active">
-                                    <a href="article_list.html">
+                                <li <c:if test="${subpage.equals('ware_list')}">class="active"</c:if>>
+                                    <a href="getWares.do">
                                         <i class="icon-bar-chart"></i> 商品列表 </a>
                                 </li>
-                                <li>
-                                    <a href="article_add.html">
+                                <li <c:if test="${subpage.equals('ware_add')}">class="active"</c:if>>
+                                    <a href="postWare.do">
                                         <i class="icon-bulb"></i> 添加商品 </a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown dropdown-fw  ">
+                        <li class="dropdown dropdown-fw active open selected ">
                             <a href="javascript:;" class="text-uppercase">
                                 <i class="icon-puzzle"></i> 订单管理 </a>
                             <ul class="dropdown-menu dropdown-menu-fw">

@@ -17,31 +17,41 @@ import java.util.List;
 public class WareController {
     @Autowired
     private WareService wareService;
-    @RequestMapping("/postWare")
+    @RequestMapping("/postWare.do")
     public String post(Ware ware){
 
-        return "ware_list";
+        return "gof/frame";
     }
-    @RequestMapping("/putWare")
+    @RequestMapping("/putWare.do")
     public String put(Ware ware){
-
-        return "ware_list";
+        System.out.println(ware.getWare_id());
+        wareService.putWare(ware);
+        return "gof/frame";
     }
-    @RequestMapping("/deleteWare")
+    @RequestMapping("/deleteWare.do")
     public String delete(Ware ware){
 
-        return "ware_list";
+        return "gof/frame";
     }
-    @RequestMapping("/getWare")
-    public String get(Model model){
-        List<Ware>staywares=wareService.getWare(1);
-        List<Ware>warewares=wareService.getWare(2);
-        List<Ware>barwares=wareService.getWare(3);
-        List<Ware>foodwares=wareService.getWare(4);
+    @RequestMapping("/getWares.do")
+    public String getWares(Model model){
+        List<Ware>staywares=wareService.getWares(1);
+        List<Ware>warewares=wareService.getWares(2);
+        List<Ware>barwares=wareService.getWares(3);
+        List<Ware>foodwares=wareService.getWares(4);
         model.addAttribute("staywares",staywares);
         model.addAttribute("warewares",warewares);
         model.addAttribute("barwares",barwares);
         model.addAttribute("foodwares",foodwares);
-        return "ware_list";
+        model.addAttribute("subpage","ware_list");
+        return "gof/frame";
+    }
+
+    @RequestMapping("/getWare.do")
+    public String getWare(Model model,Ware ware){
+        ware=wareService.getWare(ware.getWare_id());
+        model.addAttribute("ware",ware);
+        model.addAttribute("subpage","ware_edit");
+        return "gof/frame";
     }
 }

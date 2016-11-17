@@ -14,8 +14,15 @@ import java.util.List;
 public class WareService {
     @Autowired
     private WareDao wareDao;
-    public List<Ware> getWare(int ware_typeid){
-        List<Ware>wares=wareDao.get(ware_typeid);
+    public List<Ware> getWares(int ware_typeid){
+        List<Ware>wares=wareDao.getWares(ware_typeid);
         return wares;
+    }
+    public Ware getWare(int ware_id){
+        Ware ware=wareDao.getWare(ware_id);
+        return ware;
+    }
+    public void putWare(Ware ware){
+        wareDao.put(ware);
     }
 }
