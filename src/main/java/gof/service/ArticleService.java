@@ -8,7 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 /**
  * Created by Administrator on 2016/11/13.
@@ -27,5 +30,9 @@ public class ArticleService {
 
     public Article getArticle(Article article) {
         return articleDao.getArticle(article);
+    }
+
+    public void deleteArticle(Article article) {
+        articleDao.delete(article);
     }
 }

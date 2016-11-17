@@ -48,5 +48,5 @@
 
 <script>
     $('#editor').summernote({height: 450, lang: 'zh-CN'});
-    $('#edit_editor').code("${article.article_content}");
+    $('#editor').code("${article.article_content}");
 </script>

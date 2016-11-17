@@ -1,12 +1,12 @@
 package gof.dao;
 
-import gof.entity.Page;
-import gof.entity.Shop;
-import org.apache.ibatis.annotations.*;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
+        import gof.entity.Page;
+        import gof.entity.Shop;
+        import org.apache.ibatis.annotations.*;
+        import org.springframework.stereotype.Component;
+        import org.springframework.stereotype.Repository;
 
-import java.util.List;
+        import java.util.List;
 
 /**
  * Created by Administrator on 2016/11/15.

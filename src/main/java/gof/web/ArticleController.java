@@ -21,11 +21,11 @@ public class ArticleController {
     @RequestMapping("/getArticles")
     public String getArticles(Page page, Model model) {
 
-        Page articles = articleService.getArticles(page);
+        page = articleService.getArticles(page);
 
         model.addAttribute("subpage", "article_list");
 
-        model.addAttribute("page", articles);
+        model.addAttribute("page", page);
 
         return "frame";
     }
@@ -43,5 +43,11 @@ public class ArticleController {
         model.addAttribute("subpage", "article_edit");
         return "frame";
     }
-
+    @RequestMapping("/deleteArticle")
+    public String deleteArticle(Model model,Article article) {
+        Page page = new Page();
+        articleService.deleteArticle(article);
+        getArticles(page,model);
+        return "frame";
+    }
 }
