@@ -25,4 +25,5 @@ public interface WareDao {
     @Select("select *from ware where shop_id=#{shop_id}")
     List<Ware> getByShopId(int shop_id);
 
+
 }
