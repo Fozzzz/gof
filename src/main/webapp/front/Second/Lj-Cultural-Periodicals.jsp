@@ -4,18 +4,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>丽江古城--文化期刊</title>
-<link href="../css/css.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="../js/jquery/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="../js/jquery/index_tab.js"></script>
-<script type="text/javascript" src="../js/jquery/left_roll.js"></script>
-<script type="text/javascript" src="../js/Page-loading.js"></script>  
-<script type="text/javascript" src="../js/Bb-tile.js"></script>
-<script type="text/javascript" src="../js/change-tab.js"></script>
+<link href="../../../assets/front/css/css.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="../../../assets/front/js/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/jquery/index_tab.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/jquery/left_roll.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/Page-loading.js"></script>  
+<script type="text/javascript" src="../../../assets/front/js/Bb-tile.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/change-tab.js"></script>
 </head>
 
 <body>
    <!--background picture begin-->
-   <div class="picture" id="picture"><img id="bgImg" src="../images/home_top_bg.jpg" height="742"></div>
+   <div class="picture" id="picture"><img id="bgImg" src="../../../assets/front/images/home_top_bg.jpg" height="742"></div>
    <!--background picture end-->
 
    <div class="total" id="total">
@@ -38,7 +38,7 @@
             <div class="w786">
             
              <!--title begin-->
-             <div class="Lj-news-title"><span><img src="../images/icon_06_05.jpg"/></span><div>丽江文化研究会期刊</div></div>
+             <div class="Lj-news-title"><span><img src="../../../assets/front/images/icon_06_05.jpg"/></span><div>丽江文化研究会期刊</div></div>
              <!--title end-->
              
              <!--text begin-->
@@ -47,7 +47,7 @@
                 
                 <!--=====================-->
                 <div class="Cultural-Text" id="Cultural1" style="display:block">
-                  <div class="Text1"><span><img src="../images/img_06_01.jpg"/></span><div>丽江文化&nbsp;&nbsp;&nbsp;&nbsp;第一期</div></div>
+                  <div class="Text1"><span><img src="../../../assets/front/images/img_06_01.jpg"/></span><div>丽江文化&nbsp;&nbsp;&nbsp;&nbsp;第一期</div></div>
                   <div class="Text2">
                   <a href="javascript:">跨境民族基督教信仰与口头传统的互动与冲突 ——以云南傈僳族为考察个案/杨杰宏</a><br/><br/>
                   <a href="javascript:">纳西族口语谱研究/余崇先</a><br/><br/>
@@ -63,7 +63,7 @@
                 
                 <!--=====================-->
                 <div class="Cultural-Text" id="Cultural2">
-                  <div class="Text1"><span><img src="../images/img_06_01.jpg"/></span><div>丽江文化&nbsp;&nbsp;&nbsp;&nbsp;第二期</div></div>
+                  <div class="Text1"><span><img src="../../../assets/front/images/img_06_01.jpg"/></span><div>丽江文化&nbsp;&nbsp;&nbsp;&nbsp;第二期</div></div>
                   <div class="Text2">
                   <a href="javascript:">2跨境民族基督教信仰与口头传统的互动与冲突 ——以云南傈僳族为考察个案/杨杰宏</a><br/><br/>
                   <a href="javascript:">纳西族口语谱研究/余崇先</a><br/><br/>
@@ -79,7 +79,7 @@
                 
                 <!--=====================-->
                 <div class="Cultural-Text" id="Cultural3">
-                  <div class="Text1"><span><img src="../images/img_06_01.jpg"/></span><div>丽江文化&nbsp;&nbsp;&nbsp;&nbsp;第三期</div></div>
+                  <div class="Text1"><span><img src="../../../assets/front/images/img_06_01.jpg"/></span><div>丽江文化&nbsp;&nbsp;&nbsp;&nbsp;第三期</div></div>
                   <div class="Text2">
                   <a href="javascript:">3跨境民族基督教信仰与口头传统的互动与冲突 ——以云南傈僳族为考察个案/杨杰宏</a><br/><br/>
                   <a href="javascript:">纳西族口语谱研究/余崇先</a><br/><br/>
@@ -95,7 +95,7 @@
                
                 <!--=====================-->
                 <div class="Cultural-Text" id="Cultural4">
-                  <div class="Text1"><span><img src="../images/img_06_01.jpg"/></span><div>丽江文化&nbsp;&nbsp;&nbsp;&nbsp;第四期</div></div>
+                  <div class="Text1"><span><img src="../../../assets/front/images/img_06_01.jpg"/></span><div>丽江文化&nbsp;&nbsp;&nbsp;&nbsp;第四期</div></div>
                   <div class="Text2">
                   <a href="javascript:">4跨境民族基督教信仰与口头传统的互动与冲突 ——以云南傈僳族为考察个案/杨杰宏</a><br/><br/>
                   <a href="javascript:">纳西族口语谱研究/余崇先</a><br/><br/>
@@ -113,10 +113,10 @@
                 <div class="Cultural-li">
                   
                    <ul>
-                      <li onclick="Cultural(1)"><div id="Tural1" class="Tural"><img src="../images/img_06_02.jpg"/></div><span><a href="javascript:">丽江文化第一期</a></span></li>
-                      <li onclick="Cultural(2)"><div id="Tural2"><img src="../images/img_06_03.jpg"/></div><span><a href="javascript:">丽江文化第二期</a></span></li>
-                      <li onclick="Cultural(3)"><div id="Tural3"><img src="../images/img_06_04.jpg"/></div><span><a href="javascript:">丽江文化第三期</a></span></li>
-                      <li onclick="Cultural(4)"><div id="Tural4"><img src="../images/img_06_05.jpg"/></div><span><a href="javascript:">丽江文化第四期</a></span></li>
+                      <li onclick="Cultural(1)"><div id="Tural1" class="Tural"><img src="../../../assets/front/images/img_06_02.jpg"/></div><span><a href="javascript:">丽江文化第一期</a></span></li>
+                      <li onclick="Cultural(2)"><div id="Tural2"><img src="../../../assets/front/images/img_06_03.jpg"/></div><span><a href="javascript:">丽江文化第二期</a></span></li>
+                      <li onclick="Cultural(3)"><div id="Tural3"><img src="../../../assets/front/images/img_06_04.jpg"/></div><span><a href="javascript:">丽江文化第三期</a></span></li>
+                      <li onclick="Cultural(4)"><div id="Tural4"><img src="../../../assets/front/images/img_06_05.jpg"/></div><span><a href="javascript:">丽江文化第四期</a></span></li>
                    </ul>
                   
                 </div>

@@ -4,18 +4,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>丽江古城--住宿-三级</title>
-<link href="../css/css.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="../js/jquery/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="../js/jquery/index_tab.js"></script>
-<script type="text/javascript" src="../js/jquery/left_roll.js"></script>
-<script type="text/javascript" src="../js/Page-loading.js"></script>  
-<script type="text/javascript" src="../js/Bb-tile.js"></script>
-<script type="text/javascript" src="../js/room-flash.js"></script>
+<link href="../../../assets/front/css/css.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="../../../assets/front/js/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/jquery/index_tab.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/jquery/left_roll.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/Page-loading.js"></script>  
+<script type="text/javascript" src="../../../assets/front/js/Bb-tile.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/room-flash.js"></script>
 </head>
 
 <body>
    <!--background picture begin-->
-   <div class="picture" id="picture"><img id="bgImg" src="../images/home_top_bg.jpg" height="742"></div>
+   <div class="picture" id="picture"><img id="bgImg" src="../../../assets/front/images/home_top_bg.jpg" height="742"></div>
    <!--background picture end-->
 
    <div class="total" id="total">
@@ -38,7 +38,7 @@
             <div class="w786">
             
              <!--title begin-->
-             <div class="Lj-news-title"><span><img src="../images/icon_06_08.jpg"/></span><div>小桥流水，入住纳西客栈，寻找古城印象</div></div>
+             <div class="Lj-news-title"><span><img src="../../../assets/front/images/icon_06_08.jpg"/></span><div>小桥流水，入住纳西客栈，寻找古城印象</div></div>
              <!--title end-->
              
              <!--text begin-->
@@ -66,7 +66,7 @@
               <!--选项 end-->
               
               <div class="stay-three">
-               <img src="../images/img_07_03.jpg"/>
+               <img src="../../../assets/front/images/img_07_03.jpg"/>
               </div>
                 
                 
@@ -89,6 +89,6 @@
       <!--total-width end-->
    
    </div> 
-   <!--屏蔽右键,F12 begin--><script type="text/javascript" src="../js/Shielding-key.js"></script><!--屏蔽右键,F12 end-->
+   <!--屏蔽右键,F12 begin--><script type="text/javascript" src="../../../assets/front/js/Shielding-key.js"></script><!--屏蔽右键,F12 end-->
 </body>
 </html>

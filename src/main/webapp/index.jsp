@@ -8,9 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>丽江古城后台管理</title>
 </head>
-<body>
+<body class="page-header-fixed page-sidebar-closed-hide-logo">
+
 test
+
 </body>
 </html>

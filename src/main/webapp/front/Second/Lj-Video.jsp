@@ -4,17 +4,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>丽江古城--视频</title>
-<link href="../css/css.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="../js/jquery/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="../js/jquery/index_tab.js"></script>
-<script type="text/javascript" src="../js/jquery/left_roll.js"></script>
-<script type="text/javascript" src="../js/Page-loading.js"></script>  
-<script type="text/javascript" src="../js/Bb-tile.js"></script>
+<link href="../../../assets/front/css/css.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="../../../assets/front/js/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/jquery/index_tab.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/jquery/left_roll.js"></script>
+<script type="text/javascript" src="../../../assets/front/js/Page-loading.js"></script>  
+<script type="text/javascript" src="../../../assets/front/js/Bb-tile.js"></script>
 </head>
 
 <body>
    <!--background picture begin-->
-   <div class="picture" id="picture"><img id="bgImg" src="../images/home_top_bg.jpg" height="742"></div>
+   <div class="picture" id="picture"><img id="bgImg" src="../../../assets/front/images/home_top_bg.jpg" height="742"></div>
    <!--background picture end-->
 
    <div class="total" id="total">
@@ -37,7 +37,7 @@
             <div class="w786">
             
              <!--title begin-->
-             <div class="Lj-news-title"><span><img src="../images/icon_06_04.jpg"/></span><div>丽江古城最真实的景区动态信息</div></div>
+             <div class="Lj-news-title"><span><img src="../../../assets/front/images/icon_06_04.jpg"/></span><div>丽江古城最真实的景区动态信息</div></div>
              <!--title end-->
              
              <!--Video begin-->
@@ -47,17 +47,17 @@
              <!--=======================-->
              <div class="video-area">
                 <span>古城银装素裹</span>
-                <div><a href="javascript:"><img src="../images/img_04_01.jpg"/></a></div>
+                <div><a href="javascript:"><img src="../../../assets/front/images/img_04_01.jpg"/></a></div>
              </div>
              <!--=======================-->
              
              <!--=======================-->
              <div class="video-list">
-               <div class="video-more"><span><a href="javascript:">查看更多</a><img src="../images/icon_04_01.jpg"/></span></div>
+               <div class="video-more"><span><a href="javascript:">查看更多</a><img src="../../../assets/front/images/icon_04_01.jpg"/></span></div>
                <div class="video-text">
                  <ul>
-                    <li><a href="javascript:"><img src="../images/img_04_02.jpg"/></a><span><a href="javascript:">畅游丽江古城茶马古道</a></span></li>
-                    <li><a href="javascript:"><img src="../images/img_04_02.jpg"/></a><span><a href="javascript:">畅游丽江古城</a></span></li>
+                    <li><a href="javascript:"><img src="../../../assets/front/images/img_04_02.jpg"/></a><span><a href="javascript:">畅游丽江古城茶马古道</a></span></li>
+                    <li><a href="javascript:"><img src="../../../assets/front/images/img_04_02.jpg"/></a><span><a href="javascript:">畅游丽江古城</a></span></li>
                  </ul>
                </div>
              </div>

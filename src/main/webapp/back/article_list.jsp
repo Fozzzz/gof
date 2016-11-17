@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -35,76 +36,24 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td class="highlight">
-                            <div class="success"></div>
-                            <a href="javascript:;"> 这是标题 </a>
-                        </td>
-                        <td class="hidden-xs"> 这是内容</td>
-                        <td> 2016-11-14 </td>
-                        <td> <img src="tnote.ico" height="50px" width="50px"> </td>
-                        <td>
-                            <a href="javascript:;" class="btn btn-outline btn-circle btn-sm purple">
-                                <i class="fa fa-edit"></i> 编辑 </a>
-                            <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                <i class="fa fa-trash-o"></i> 删除 </a>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+                    <c:forEach var="temp" items="${page.list}">
+                        <tr>
+                            <td class="highlight">
+                                <div class="success"></div>
+                                <a href="javascript:;"> ${temp.article_title} </a>
+                            </td>
+                            <td class="hidden-xs"> ${temp.article_content}</td>
+                            <td> ${temp.article_date} </td>
+                            <td> <img src="../assets/img/tnote.ico" height="50px" width="50px"> </td>
+                            <td>
+                                <a href="getArticle.do?article_id=${temp.article_id}" class="btn btn-outline btn-circle btn-sm purple">
+                                    <i class="fa fa-edit"></i> 编辑 </a>
+                                <a href="deleteArticle.do?article_id=${temp.article_id}" class="btn btn-outline btn-circle dark btn-sm black">
+                                    <i class="fa fa-trash-o"></i> 删除 </a>
+                            </td>
+                        </tr>
+                    </c:forEach>
 
-    <!--丽江动态-->
-    <div class="portlet">
-        <div class="portlet-title">
-            <div class="caption">
-                <i class="fa fa-bell-o"></i>丽江动态
-            </div>
-            <div class="tools">
-                <a href="javascript:;" class="collapse"> </a>
-                <a href="#portlet-config" data-toggle="modal" class="config"> </a>
-                <a href="javascript:;" class="reload"> </a>
-                <a href="javascript:;" class="remove"> </a>
-            </div>
-        </div>
-        <div class="portlet-body">
-            <div class="table-scrollable">
-                <table class="table table-striped table-bordered table-advance table-hover">
-                    <thead>
-                    <tr>
-                        <th>
-                            <i class="fa fa-briefcase"></i> 标题
-                        </th>
-                        <th class="hidden-xs">
-                            <i class="fa fa-user"></i> 内容
-                        </th>
-                        <th>
-                            <i class="fa fa-shopping-cart"></i>发布时间
-                        </th>
-                        <th>
-                            <i class="fa fa-shopping-cart"></i>封面
-                        </th>
-                        <th></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td class="highlight">
-                            <div class="success"></div>
-                            <a href="javascript:;"> 这是标题 </a>
-                        </td>
-                        <td class="hidden-xs"> 这是内容</td>
-                        <td> 2016-11-14 </td>
-                        <td> <img src="tnote.ico" height="50px" width="50px"> </td>
-                        <td>
-                            <a href="javascript:;" class="btn btn-outline btn-circle btn-sm purple">
-                                <i class="fa fa-edit"></i> 编辑 </a>
-                            <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                <i class="fa fa-trash-o"></i> 删除 </a>
-                        </td>
-                    </tr>
                     </tbody>
                 </table>
             </div>

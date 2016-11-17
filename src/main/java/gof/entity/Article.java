@@ -8,12 +8,12 @@ public class Article {
    public String article_content;
    public Date article_date;
    
-   public ArticleType articleType_id;
+   public Integer articleType_id;
 
    public Article() {
    }
 
-   public Article(Integer article_id, String article_title, String article_content, Date article_date, ArticleType articleType_id) {
+   public Article(Integer article_id, String article_title, String article_content, Date article_date, Integer articleType_id) {
       this.article_id = article_id;
       this.article_title = article_title;
       this.article_content = article_content;
@@ -53,11 +53,11 @@ public class Article {
       this.article_date = article_date;
    }
 
-   public ArticleType getArticleType_id() {
+   public Integer getArticleType_id() {
       return articleType_id;
    }
 
-   public void setArticleType_id(ArticleType articleType_id) {
+   public void setArticleType_id(Integer articleType_id) {
       this.articleType_id = articleType_id;
    }
 }
