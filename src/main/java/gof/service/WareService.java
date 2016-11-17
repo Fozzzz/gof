@@ -22,4 +22,7 @@ public class WareService {
         Ware ware=wareDao.getWare(ware_id);
         return ware;
     }
+    public void putWare(Ware ware){
+        wareDao.put(ware);
+    }
 }
