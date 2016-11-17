@@ -29,7 +29,7 @@
     </filter>
     <filter-mapping>
         <filter-name>encodingFilter</filter-name>
-        <url-pattern>/gof/*</url-pattern>
+        <url-pattern>*.do</url-pattern>
     </filter-mapping>
 
     <servlet>
