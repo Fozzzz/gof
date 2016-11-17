@@ -20,7 +20,7 @@ public interface ArticleDao {
     int delete(Article article);
     @Update("update article set article_title=#{article_title},article_content=#{article_content},article_date=#{article_date} where article_id=#{article_id}")
     int put(Article article);
-    @Insert("insert into article(article_title,article_content,article_date) values(#{article_title},#{article_content},#{article_date})")
+    @Insert("insert into article(article_title,article_content,article_date,articleType_id) values(#{article_title},#{article_content},#{article_date},#{articleType_id})")
     int post(Article article);
     @Select("select * from article")
     ArrayList<Article> getArticles();
