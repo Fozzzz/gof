@@ -14,9 +14,9 @@ public class LoginController {
         String result=null;
         System.out.println(user.getUsername());
         if (user.getUsername().equals("sirenbang")&&user.getPassword().equals("123456")){
-            result="/frame";
+            result="frame";
         }else {
-            result="/error";
+            result="error";
         }
         return result;
     }
