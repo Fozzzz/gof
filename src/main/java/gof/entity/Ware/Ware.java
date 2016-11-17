@@ -9,6 +9,7 @@ public class Ware {
     private double ware_price;
     private Integer ware_shopid;
     private Integer ware_typeid;
+    private String ware_picture;
     private String ware_bed;
     private String ware_breakfast;
     private String ware_wifi;
@@ -17,20 +18,30 @@ public class Ware {
     public Ware() {
     }
 
-    public Ware(Integer ware_id, String ware_name, double ware_price, Integer ware_shopid, Integer ware_typeid) {
+    public Ware(Integer ware_id, String ware_name, double ware_price, Integer ware_shopid, Integer ware_typeid, String ware_picture) {
         this.ware_id = ware_id;
         this.ware_name = ware_name;
         this.ware_price = ware_price;
         this.ware_shopid = ware_shopid;
         this.ware_typeid = ware_typeid;
+        this.ware_picture = ware_picture;
     }
 
-    public Ware(Integer ware_id, String ware_name, double ware_price, Integer ware_shopid, Integer ware_typeid, String ware_bed, String ware_breakfast, String ware_wifi, String ware_gift) {
+    public String getWare_picture() {
+        return ware_picture;
+    }
+
+    public void setWare_picture(String ware_picture) {
+        this.ware_picture = ware_picture;
+    }
+
+    public Ware(Integer ware_id, String ware_name, double ware_price, Integer ware_shopid, Integer ware_typeid, String ware_picture, String ware_bed, String ware_breakfast, String ware_wifi, String ware_gift) {
         this.ware_id = ware_id;
         this.ware_name = ware_name;
         this.ware_price = ware_price;
         this.ware_shopid = ware_shopid;
         this.ware_typeid = ware_typeid;
+        this.ware_picture = ware_picture;
         this.ware_bed = ware_bed;
         this.ware_breakfast = ware_breakfast;
         this.ware_wifi = ware_wifi;

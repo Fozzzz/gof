@@ -17,22 +17,22 @@ import java.util.List;
 public class WareController {
     @Autowired
     private WareService wareService;
-    @RequestMapping("/postWare")
+    @RequestMapping("/postWare.do")
     public String post(Ware ware){
 
-        return "ware_list";
+        return "back/ware_list";
     }
-    @RequestMapping("/putWare")
+    @RequestMapping("/putWare.do")
     public String put(Ware ware){
 
-        return "ware_list";
+        return "back/ware_list";
     }
-    @RequestMapping("/deleteWare")
+    @RequestMapping("/deleteWare.do")
     public String delete(Ware ware){
 
-        return "ware_list";
+        return "back/ware_list";
     }
-    @RequestMapping("/getWare")
+    @RequestMapping("/getWare.do")
     public String get(Model model){
         List<Ware>staywares=wareService.getWare(1);
         List<Ware>warewares=wareService.getWare(2);
@@ -42,6 +42,6 @@ public class WareController {
         model.addAttribute("warewares",warewares);
         model.addAttribute("barwares",barwares);
         model.addAttribute("foodwares",foodwares);
-        return "ware_list";
+        return "back/ware_list";
     }
 }
