@@ -20,16 +20,17 @@ public interface ArticleDao {
     int put(Article article);
     @Insert("insert into article(article_title,article_content,article_date,articleType_id) values(#{article_title},#{article_content},#{article_date},#{articleType_id})")
     int post(Article article);
-    @Select("select * from article")
-    ArrayList<Article> getArticles();
+
     @Select("select * from article where article_id=#{article_id}")
     Article getArticle(Article article);
 
     /**
      * 根据类型查找文章
-     * @param articleType_id
      * @return
      */
-    @Select("select * from article where articleType_id=#{articleType_id} limit 0,#{pageNumber}")
+    @Select("select * from article where articleType_id=#{articleType_id} order by article_id desc")
+    ArrayList<Article> getArticles(ArticleType articleType);
+
+    @Select("select * from article where articleType_id=#{articleType_id} order by article_id desc limit 0,#{pageNumber}")
     List<Article> getArticlesByType(@Param("articleType_id")Integer articleType_id, @Param("pageNumber")Integer pageNumber);
 }

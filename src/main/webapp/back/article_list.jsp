@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -13,7 +14,18 @@
     <div class="portlet">
         <div class="portlet-title">
             <div class="caption">
-                <i class="fa fa-bell-o"></i>丽江维护费
+                <i class="fa fa-bell-o"></i>${articleType.articleType_name}
+                <select onchange="change(this)">
+                    <option>其他栏目</option>
+                    <c:forEach var="temp" items="${list}">
+                        <option value="${temp.articleType_id}">${temp.articleType_name}</option>
+                    </c:forEach>
+                </select>
+                <script>
+                    function change(temp){
+                        location.href="getArticles.do?articleType_id="+temp.value;
+                    }
+                </script>
             </div>
         </div>
         <div class="portlet-body">
@@ -24,12 +36,7 @@
                         <th>
                             <i class="fa fa-briefcase"></i> 标题
                         </th>
-                        <th class="hidden-xs">
-                            <i class="fa fa-user"></i> 内容
-                        </th>
-                        <th>
-                            <i class="fa fa-shopping-cart"></i>类型
-                        </th>
+
                         <th>
                             <i class="fa fa-shopping-cart"></i>发布时间
                         </th>
@@ -44,10 +51,9 @@
                         <tr>
                             <td class="highlight">
                                 <div class="success"></div>
-                                <a href="javascript:;"> ${temp.article_title} </a>
+                                <a target="_blank" href="getArticle.action?article_id=${temp.article_id }"> ${temp.article_title} </a>
                             </td>
-                            <td class="hidden-xs"> ${temp.article_content}</td>
-                            <td class="hidden-xs"> ${temp.articleType_id}</td>
+
                             <td>
                                 <fmt:formatDate type="date" value="${temp.article_date}" />
                              </td>

@@ -22,7 +22,7 @@
         <div class="Lj-roll">
             <ul>
                 <li v-for="temp in fee">
-                    <img src="../../../assets/front/images/icon_01_23.png"/><a href="javascript:">{{ temp.article_title }}</a>
+                    <img src="../../../assets/front/images/icon_01_23.png"/><a href="getArticle.action?article_id={{temp.article_id }}">{{ temp.article_title }}</a>
                 </li>
             </ul>
         </div>
@@ -32,7 +32,7 @@
     <!--========================-->
     <div class="Lj-img">
         <span><img src="../../../assets/front/images/img_01_07.jpg"/></span>
-        <a href="javascript:"><img src="../../../assets/front/images/img_01_08.jpg"/></a>
+        <a href="#"><img src="../../../assets/front/images/img_01_08.jpg"/></a>
     </div>
     <!--========================-->
 
@@ -42,7 +42,7 @@
         <div class="Lj-trends">
             <ul>
                 <li v-for="temp in message">
-                    <a href="javascript:">{{temp.article_title}}</a>
+                    <a href="getArticle.action?article_id={{temp.article_id }}">{{temp.article_title}}</a>
                 </li>
             </ul>
         </div>

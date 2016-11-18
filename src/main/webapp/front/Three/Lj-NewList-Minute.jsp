@@ -58,7 +58,6 @@
                 <div class="Minute-text" id="right">
                     ${article.article_content}
                 </div>
-                <div class="Minute-paging"><span><a href="javascript:">上一篇</a><a href="javascript:">下一篇</a></span></div>
                 <!--=====================-->
                 
              </div>
