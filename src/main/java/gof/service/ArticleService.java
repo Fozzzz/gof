@@ -24,10 +24,10 @@ public class ArticleService {
     private ArticleDao articleDao;
     @Autowired
     private ArticleTypeDao articleTypeDao;
-    public Page getArticles(Page page) {
+    public Page getArticles(Page page,ArticleType articleType) {
         page.setPageNumber(5);
         page.setTotalNumber(10);
-        ArrayList<Article> articles = articleDao.getArticles();
+        ArrayList<Article> articles = articleDao.getArticles(articleType);
         page.setList(articles);
         return page;
     }
@@ -54,5 +54,9 @@ public class ArticleService {
 
     public List<Article> getArticlesByType(Integer articleType_id,Integer pageNumber) {
         return articleDao.getArticlesByType(articleType_id,pageNumber);
+    }
+
+    public ArticleType getArticleTypeById(ArticleType articleType) {
+        return articleTypeDao.getArticleType(articleType);
     }
 }

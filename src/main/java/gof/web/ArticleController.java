@@ -24,6 +24,10 @@ import java.util.List;
  */
 @Controller
 public class ArticleController {
+
+    @Autowired
+    private ArticleService articleService;
+
     //    登录页面跳转
     @RequestMapping("/admin.do")
     public String admin() {
@@ -36,7 +40,7 @@ public class ArticleController {
         System.out.println(user.getUsername());
         if (user.getUsername().equals("123") && user.getPassword().equals("123")) {
             Page page = new Page();
-            result = getArticles(page, model, session);
+            result = getArticles(page, model, session,null);
             session.setAttribute("admin", user.getUsername());
         } else {
             result = "error";
@@ -50,8 +54,7 @@ public class ArticleController {
         return "back/login";
     }
 
-    @Autowired
-    private ArticleService articleService;
+
 
     /**
      * 得到列表数据页面
@@ -60,15 +63,29 @@ public class ArticleController {
      * @param model
      * @return
      */
-    @RequestMapping("/getArticles")
-    public String getArticles(Page page, Model model, HttpSession session) {
+    @RequestMapping("/getArticles.do")
+    public String getArticles(Page page, Model model, HttpSession session,ArticleType articleType) {
+
+        if(articleType==null){
+            articleType=new ArticleType();
+            articleType.setArticleType_id(15);
+        }
+
         model.addAttribute("admin", session.getAttribute("admin"));
 
-        page = articleService.getArticles(page);
+        page = articleService.getArticles(page,articleType);
 
         model.addAttribute("subpage", "article_list");
 
         model.addAttribute("page", page);
+
+        //栏目选项
+        List<ArticleType> list = articleService.getArticleType();
+        model.addAttribute("list", list);
+
+        //栏目名字
+        articleType=articleService.getArticleTypeById(articleType);
+        model.addAttribute("articleType",articleType);
 
         return "frame";
     }
@@ -79,7 +96,7 @@ public class ArticleController {
      * @param model
      * @return
      */
-    @RequestMapping(value = "/postArticle", method = RequestMethod.GET)
+    @RequestMapping(value = "/postArticle.do", method = RequestMethod.GET)
     public String postArticle1(Model model, HttpSession session) {
         model.addAttribute("admin", session.getAttribute("admin"));
         List<ArticleType> list = articleService.getArticleType();
@@ -95,7 +112,7 @@ public class ArticleController {
      * @param article
      * @return
      */
-    @RequestMapping("/getArticle")
+    @RequestMapping("/getArticle.do")
     public String getArticle(Model model, Article article, HttpSession session) {
         model.addAttribute("admin", session.getAttribute("admin"));
 //        选项
@@ -116,11 +133,11 @@ public class ArticleController {
      * @param article
      * @return
      */
-    @RequestMapping("/deleteArticle")
+    @RequestMapping("/deleteArticle.do")
     public String deleteArticle(Model model, Article article, HttpSession session) {
         Page page = new Page();
         articleService.deleteArticle(article);
-        getArticles(page, model, session);
+        getArticles(page, model, session,null);
         return "frame";
     }
 
@@ -131,11 +148,11 @@ public class ArticleController {
      * @param article
      * @return
      */
-    @RequestMapping(value = "/postArticle", method = RequestMethod.POST)
+    @RequestMapping(value = "/postArticle.do", method = RequestMethod.POST)
     public String postArticle(Model model, Article article, HttpSession session) {
         articleService.postArticle(article);
         Page page = new Page();
-        return getArticles(page, model, session);
+        return getArticles(page, model, session,null);
     }
 
     /**
@@ -145,11 +162,11 @@ public class ArticleController {
      * @param article
      * @return
      */
-    @RequestMapping(value = "/putArticle", method = RequestMethod.POST)
+    @RequestMapping(value = "/putArticle.do", method = RequestMethod.POST)
     public String putArticle(Model model, Article article, HttpSession session) {
         articleService.putArticle(article);
         Page page = new Page();
-        return getArticles(page, model, session);
+        return getArticles(page, model, session,null);
     }
 
     /**

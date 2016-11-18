@@ -51,8 +51,8 @@
                     <div class="news">
                         <ul>
                             <li v-for="temp in type23">
-                                <img src="../../../assets/front/images/icon_01_38.jpg"/><a href="javascript:">{{
-                                temp.article_title }}</a>
+                                <img src="../../../assets/front/images/icon_01_38.jpg"/><a href="getArticle.action?article_id={{temp.article_id }}">
+                                {{temp.article_title }}</a>
                             </li>
                         </ul>
                     </div>
@@ -85,13 +85,13 @@
 
                         <ul>
                             <li v-for="temp in type13">
-                                <img src="../../../assets/front/images/icon_01_41.jpg"/><a href="javascript:">{{
+                                <img src="../../../assets/front/images/icon_01_41.jpg"/><a href="getArticle.action?article_id={{temp.article_id }}">{{
                                 temp.article_title }}</a>
                             </li>
                         </ul>
                         <ul>
                             <li v-for="temp in type12">
-                                <img src="../../../assets/front/images/icon_01_41.jpg"/><a href="javascript:">{{
+                                <img src="../../../assets/front/images/icon_01_41.jpg"/><a href="getArticle.action?article_id={{temp.article_id }}">{{
                                 temp.article_title }}</a>
                             </li>
                         </ul>
@@ -100,14 +100,14 @@
                     <div class="manage-text" id="text2" style=" display:none">
                         <ul>
                             <li v-for="temp in type14">
-                                <img src="../../../assets/front/images/icon_01_41.jpg"/><a href="javascript:">{{
+                                <img src="../../../assets/front/images/icon_01_41.jpg"/><a href="getArticle.action?article_id={{temp.article_id }}">{{
                                 temp.article_title }}</a>
                             </li>
                         </ul>
                         <ul>
                             <li v-for="temp in type15">
                                 <img src="../../../assets/front/images/icon_01_41.jpg"/>
-                                <a href="javascript:">{{temp.article_title }}</a>
+                                <a href="getArticle.action?article_id={{temp.article_id }}">{{temp.article_title }}</a>
                             </li>
                         </ul>
                     </div>
@@ -115,13 +115,13 @@
                         <ul>
                             <li v-for="temp in type11">
                                 <img src="../../../assets/front/images/icon_01_41.jpg"/>
-                                <a href="javascript:">{{temp.article_title }}</a>
+                                <a href="getArticle.action?article_id={{temp.article_id }}">{{temp.article_title }}</a>
                             </li>
                         </ul>
                         <ul>
                             <li v-for="temp in type10">
                                 <img src="../../../assets/front/images/icon_01_41.jpg"/>
-                                <a href="javascript:">{{temp.article_title }}</a>
+                                <a href="getArticle.action?article_id={{temp.article_id }}">{{temp.article_title }}</a>
                             </li>
                         </ul>
                     </div>
@@ -195,7 +195,7 @@
                     <div class="culture-text" id="cul1" style="display:block">
                         <ul>
                             <li v-for="temp in type7">
-                                <span><a href="javascript:">{{temp.article_title }}</a></span>
+                                <span><a href="getArticle.action?article_id={{temp.article_id }}">{{temp.article_title }}</a></span>
                                 <div>{{temp.article_content }}</div>
                             </li>
                         </ul>
@@ -204,7 +204,7 @@
                     <div class="culture-text" id="cul2" style="display:none">
                         <ul>
                             <li v-for="temp in type8">
-                                <span><a href="javascript:">{{temp.article_title }}</a></span>
+                                <span><a href="getArticle.action?article_id={{temp.article_id }}">{{temp.article_title }}</a></span>
                                 <div>{{temp.article_content }}</div>
                             </li>
                         </ul>
@@ -213,7 +213,7 @@
                     <div class="culture-text" id="cul3" style="display:none">
                         <ul>
                             <li v-for="temp in type9">
-                                <span><a href="javascript:">{{temp.article_title }}</a></span>
+                                <span><a href="getArticle.action?article_id={{temp.article_id }}">{{temp.article_title }}</a></span>
                                 <div>{{temp.article_content }}</div>
                             </li>
                         </ul>
