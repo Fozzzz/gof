@@ -3,7 +3,7 @@
   User: Administrator
   Date: 2016/11/14
   Time: 9:57
-  编辑商品
+ 添加商品
 --%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="utf-8" language="java" %>
 <form action="/gof/postWare.do" method="post">
