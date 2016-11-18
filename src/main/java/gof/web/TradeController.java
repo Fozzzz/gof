@@ -2,6 +2,7 @@ package gof.web;
 
 import gof.dao.trade.TradeDao;
 import gof.entity.Page;
+import gof.entity.trade.Party;
 import gof.entity.trade.Trade;
 import gof.service.TradeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -25,24 +27,41 @@ public class TradeController {
     @RequestMapping("/getLimit.do")
     public String getLimit(Page page, Model model) {
         model.addAttribute("page", tradeService.getLimit(page));
-        return "Online_inquiry";
+        return "front/Online/Online_inquiry";
     }
 
     @RequestMapping("/deleteById.do")
-    public String deleteById(Integer t_id, Page page, Model model) {
-        tradeDao.delete(t_id);
+    public String deleteById(Integer p_id, Page page, Model model) {
+        tradeDao.deleteP(p_id);
         return getLimit(page, model);
     }
 
+//    @RequestMapping("/add.do")
+//    public String add(Trade trade, Page page, Model model) {
+//        if (trade.getParty()!=null) {
+//           tradeService.post(trade);
+//        }
+//        return getLimit(page, model);
+//    }
+
     @RequestMapping("/add.do")
-    public String add(Trade trade, Page page, Model model) {
-        tradeDao.post(trade);
-        return getLimit(page, model);
+    public String add(Trade trade, Model model) {
+        if (trade.getParty()!=null) {
+            tradeService.post(trade);
+
+            trade.setTrade_firstDate("2015-11-11");
+            trade.setTrade_lastDate("2016-11-11");
+
+            model.addAttribute("trade",trade);
+        }
+        return "front/Online/Online_inquiry";
     }
 
     @RequestMapping("/update.do")
-    public String update(Trade trade, Page page, Model model) {
-        tradeDao.put(trade);
+    public String update(Party party, Page page, Model model) {
+        tradeDao.putP(party);
         return getLimit(page, model);
     }
+
+
 }
