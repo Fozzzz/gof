@@ -82,16 +82,16 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown dropdown-fw ">
+                        <li class="dropdown dropdown-fw "<c:if test="${subpage.equals('shop_list')||subpage.equals('shop_add')}">active open selected</c:if>">
                             <a href="javascript:;" class="text-uppercase">
                                 <i class="icon-puzzle"></i> 商家管理 </a>
                             <ul class="dropdown-menu dropdown-menu-fw">
-                                <li class="active">
-                                    <a href="article_list.html">
-                                        <i class="icon-bar-chart"></i> 商家列表 </a>
+                                <li <c:if test="${subpage.equals('shop_list')}">class="active"</c:if>>
+                                    <a href="getShops.do">
+                                            <i class="icon-bar-chart"></i> 商家列表 </a>
                                 </li>
-                                <li>
-                                    <a href="article_add.html">
+                                <li <c:if test="${subpage.equals('shop_add')}">class="active"</c:if>>
+                                    <a href="postShop.do">
                                         <i class="icon-bulb"></i> 添加商家 </a>
                                 </li>
                             </ul>
