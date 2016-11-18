@@ -69,7 +69,7 @@
         },
         methods: {
             getFee: function () {
-                apiUrl = "getArticlesByType.action?articleType_id=15";
+                apiUrl = "getArticlesByType.action?articleType_id=15&pageNumber=10";
                 this.$http.get(apiUrl)
                         .then(function (response) {
                             console.info( response.data)
@@ -77,7 +77,7 @@
                         })
             },
             getMessage: function () {
-                apiUrl = "getArticlesByType.action?articleType_id=20";
+                apiUrl = "getArticlesByType.action?articleType_id=20&pageNumber=5";
                 this.$http.get(apiUrl)
                         .then(function (response) {
                             console.info( response.data)

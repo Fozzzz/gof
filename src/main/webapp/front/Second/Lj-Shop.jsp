@@ -83,7 +83,7 @@
                                 <!--详情 begin-->
                                 <div class="Bar-Text">
                                     <h1 class="Bar-h1"><a href="javascript:">${shop.shop_name}</a></h1>
-                          <span class="Bar-Txt">${shop.shop_content}</span>
+                                    <span class="Bar-Txt">${shop.shop_content}</span>
                                     <i class="Bar-Text-i">地址：${shop.shop_address}</i>
                                     <i class="Bar-Text-i">电话：${shop.shop_tel}</i>
                                 </div>
@@ -93,11 +93,31 @@
 
                     </ul>
 
-                    <div class="Lj-news-page">共${page.totalNumber}条记录 ${page.currentPage}/${page.totalPage}页<a href="javascript:">首页</a><a href="javascript:">上一页</a><a
-                            href="javascript:">下一页</a><a href="javascript:">尾页</a>第<select class="select">
-                        <option>1</option>
-                        <option>2</option>
-                    </select>页
+                    <div class="Lj-news-page">
+                        共${page.totalNumber}条记录 ${page.currentPage}/${page.totalPage}页
+                        <a href="/gof/shop/get.action">首页</a>
+                        <c:if test="${!page.firstPage}">
+                            <a href="/gof/shop/get.action?currentPage=${page.frontPage}" id="nextpage" title=""
+                               accesskey="n">上一页</a>
+                        </c:if>
+                        <c:if test="${!page.lastPage}">
+                            <a href="/gof/shop/get.action?currentPage=${page.nextPage}">下一页</a>&nbsp;
+                        </c:if>
+                        <a href="/gof/shop/get.action?currentPage=${page.totalPage}">尾页</a>
+                        第
+                        <%--<select class="select" id="select" onchange="open()">--%>
+                        <%--<c:forEach var="x" begin="1" end="${page.totalPage}" step="1">--%>
+                            <%--<option value="${x}">${x}</option>--%>
+
+                        <%--</c:forEach>--%>
+                       <%----%>
+                    <%--</select>--%>
+                        <form action="/gof/shop/get.action">
+                        <input type="text" name="currentPage" STYLE="background-size: 10PX">
+                            页
+                            <input type="submit" value="确定">
+                        </form>
+
                     </div>
                 </div>
                 <!--text end-->

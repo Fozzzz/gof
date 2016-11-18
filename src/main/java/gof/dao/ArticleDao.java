@@ -3,10 +3,7 @@ package gof.dao;
 import gof.entity.Article;
 import gof.entity.ArticleType;
 import gof.entity.Page;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -33,6 +30,6 @@ public interface ArticleDao {
      * @param articleType_id
      * @return
      */
-    @Select("select * from article where articleType_id=#{articleType_id}")
-    List<Article> getArticlesByType(Integer articleType_id);
+    @Select("select * from article where articleType_id=#{articleType_id} limit 0,#{pageNumber}")
+    List<Article> getArticlesByType(@Param("articleType_id")Integer articleType_id, @Param("pageNumber")Integer pageNumber);
 }

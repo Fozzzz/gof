@@ -38,6 +38,7 @@ public class ShopServiceImpl implements ShopService{
 
 
     public Page get(Page page) {
+
         page.setTotalNumber(shopDao.getCount());
         page.init();
         List<Shop> shops = shopDao.get(page.getCurrentNumber(), page.getPageNumber());

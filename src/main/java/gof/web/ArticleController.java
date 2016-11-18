@@ -24,6 +24,11 @@ import java.util.List;
  */
 @Controller
 public class ArticleController {
+    //    登录页面跳转
+    @RequestMapping("/admin.do")
+    public String admin() {
+        return "back/login";
+    }
 //    登录
     @RequestMapping("/login.do")
     public String login(User user, Model model, HttpSession session) {
@@ -153,8 +158,11 @@ public class ArticleController {
      * @return
      */
     @RequestMapping(value = "/getArticlesByType.action")
-    public @ResponseBody List<Article> getArticlesByType(Integer articleType_id) {
-        return articleService.getArticlesByType(articleType_id);
+    public @ResponseBody List<Article> getArticlesByType(Integer articleType_id,Integer pageNumber) {
+        if(pageNumber==null){
+            pageNumber=12;
+        }
+        return articleService.getArticlesByType(articleType_id,pageNumber);
     }
     /**
      * 前台首页跳转
@@ -163,5 +171,16 @@ public class ArticleController {
     @RequestMapping(value = "/index.action")
     public String index() {
         return "front/First/index";
+    }
+    /**
+     * 前台
+     * 文章详情 action
+     * @return
+     */
+    @RequestMapping(value = "/getArticle.action")
+    public String getArticlesByType(Model model,Article article) {
+        article = articleService.getArticle(article);
+        model.addAttribute("article",article);
+        return "front/Three/Lj-NewList-Minute";
     }
 }

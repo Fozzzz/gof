@@ -68,7 +68,7 @@
                 <%--功能模块列表--%>
                 <div class="nav-collapse collapse navbar-collapse navbar-responsive-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="dropdown dropdown-fw  active open selected">
+                        <li class="dropdown dropdown-fw <c:if test="${subpage.equals('article_list')||subpage.equals('article_add')}">active open selected</c:if> ">
                             <a href="getArticles.do" class="text-uppercase">
                                 <i class="icon-home"></i> 文章管理 </a>
                             <ul class="dropdown-menu dropdown-menu-fw">
@@ -82,7 +82,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown dropdown-fw active open selected ">
+                        <li class="dropdown dropdown-fw ">
                             <a href="javascript:;" class="text-uppercase">
                                 <i class="icon-puzzle"></i> 商家管理 </a>
                             <ul class="dropdown-menu dropdown-menu-fw">
@@ -96,7 +96,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown dropdown-fw active open selected ">
+                        <li class="dropdown dropdown-fw <c:if test="${subpage.equals('ware_list')||subpage.equals('ware_add')}">active open selected</c:if>">
                             <a href="javascript:;" class="text-uppercase">
                                 <i class="icon-puzzle"></i> 商品管理 </a>
                             <ul class="dropdown-menu dropdown-menu-fw">
@@ -110,7 +110,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown dropdown-fw active open selected ">
+                        <li class="dropdown dropdown-fw">
                             <a href="javascript:;" class="text-uppercase">
                                 <i class="icon-puzzle"></i> 订单管理 </a>
                             <ul class="dropdown-menu dropdown-menu-fw">
