@@ -17,10 +17,10 @@ public class ShopController {
     @Autowired
     private ShopService shopService;
 
-    @RequestMapping("/get.do")
+    @RequestMapping("/get.action")
     public String get(Page page, Model model){
         page=shopService.get(page);
         model.addAttribute("page",page);
-        return "sfds";
+        return "../front/Second/Lj-Shop";
     }
 }
