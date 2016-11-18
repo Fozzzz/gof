@@ -36,7 +36,7 @@
     <h2>页面没有找到</h2>
     <p> 你可能没有权限访问该服务 </p>
     <p>
-        <a href="back/login.jsp" class="btn red btn-outline"> 登录 </a>
+        <a href="admin.do" class="btn red btn-outline"> 登录 </a>
         <br> </p>
 </div>
 <!--[if lt IE 9]>

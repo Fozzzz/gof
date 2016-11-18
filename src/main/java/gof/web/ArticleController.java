@@ -24,6 +24,11 @@ import java.util.List;
  */
 @Controller
 public class ArticleController {
+    //    登录页面跳转
+    @RequestMapping("/admin.do")
+    public String admin() {
+        return "back/login";
+    }
 //    登录
     @RequestMapping("/login.do")
     public String login(User user, Model model, HttpSession session) {

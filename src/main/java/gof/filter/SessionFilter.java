@@ -17,7 +17,7 @@ public class SessionFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
         String uri = httpServletRequest.getRequestURI();
-        if (uri.indexOf("login") != -1) {
+        if (uri.indexOf("login") != -1||uri.indexOf("admin") != -1) {
             filterChain.doFilter(httpServletRequest, httpServletResponse);
         } else {
             HttpSession session = httpServletRequest.getSession();
