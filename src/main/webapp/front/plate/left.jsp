@@ -10,16 +10,16 @@
 <head>
     <title>Title</title>
     <script src="http://static.runoob.com/assets/vue/1.0.11/vue.min.js"></script>
-    <script src="../First/vue-resource.min.js"></script>
+    <script src="../assets/js/vue-resource.min.js"></script>
 </head>
 <body>
 <!--left begin-->
-<div class="w355">
+<div class="w355" id="app">
 
     <!--========================-->
     <div class="Lj-cost">
         <span><img src="../../../assets/front/images/icon_01_22.jpg"/></span>
-        <div class="Lj-roll" id="app">
+        <div class="Lj-roll">
             <ul>
                 <li v-for="temp in fee">
                     <img src="../../../assets/front/images/icon_01_23.png"/><a href="javascript:">{{ temp.article_title }}</a>

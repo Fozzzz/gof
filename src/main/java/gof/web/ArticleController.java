@@ -156,4 +156,12 @@ public class ArticleController {
     public @ResponseBody List<Article> getArticlesByType(Integer articleType_id) {
         return articleService.getArticlesByType(articleType_id);
     }
+    /**
+     * 前台首页跳转
+     * @return
+     */
+    @RequestMapping(value = "/index.action")
+    public String index() {
+        return "front/First/index";
+    }
 }
