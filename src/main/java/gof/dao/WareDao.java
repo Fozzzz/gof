@@ -21,9 +21,10 @@ public interface WareDao {
     @Insert("insert into ware(ware_name,ware_price,shop_id,ware_typeid,ware_bed,ware_breakfast,ware_wifi,ware_gift) values(#{ware_name},#{ware_price},#{shop_id},#{ware_typeid},#{ware_bed},#{ware_breakfast},#{ware_wifi},#{ware_gift})")
     int post(Ware ware);
     @Select("select *from ware where ware_typeid=#{ware_typeid}")
-    List<Ware> get(int ware_typeid);
+    List<Ware> getWares(int ware_typeid);
+    @Select("select *from ware where ware_id=#{ware_id}")
+    Ware getWare(int ware_id);
     @Select("select *from ware where shop_id=#{shop_id}")
     List<Ware> getByShopId(int shop_id);
-
 
 }
