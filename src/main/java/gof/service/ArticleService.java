@@ -52,7 +52,7 @@ public class ArticleService {
         articleDao.put(article);
     }
 
-    public List<Article> getArticlesByType(Integer articleType_id) {
-        return articleDao.getArticlesByType(articleType_id);
+    public List<Article> getArticlesByType(Integer articleType_id,Integer pageNumber) {
+        return articleDao.getArticlesByType(articleType_id,pageNumber);
     }
 }
