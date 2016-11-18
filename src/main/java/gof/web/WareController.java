@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
@@ -17,14 +18,20 @@ import java.util.List;
 public class WareController {
     @Autowired
     private WareService wareService;
-    @RequestMapping("/postWare.do")
+    @RequestMapping(value = "/postWare.do",method = RequestMethod.GET)
+    public String post(Model model){
+        model.addAttribute("subpage","ware_add");
+        return "frame";
+    }
+    @RequestMapping(value = "/postWare.do",method = RequestMethod.POST)
     public String post(Ware ware){
-
+        wareService.postWare(ware);
         return "frame";
     }
     @RequestMapping("/putWare.do")
     public String put(Ware ware){
-        System.out.println(ware.getWare_id());
+        System.out.println(ware.getWare_name());
+        System.out.println(ware.getWare_wifi());
         wareService.putWare(ware);
         return "frame";
     }

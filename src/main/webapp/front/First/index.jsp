@@ -13,6 +13,8 @@
     <script type="text/javascript" src="../../../assets/front/js/change-tab.js"></script>
     <script type="text/javascript" src="../../../assets/front/js/Page-loading.js"></script>
     <script type="text/javascript" src="../../../assets/front/js/Bb-tile.js"></script>
+    <script src="http://static.runoob.com/assets/vue/1.0.11/vue.min.js"></script>
+    <script src="../assets/js/vue-resource.min.js"></script>
 <html>
 <head>
     <title>Title</title>
@@ -39,7 +41,7 @@
             <!--left end-->
 
             <!--right begin-->
-            <div class="w786">
+            <div class="w786" id="app1">
 
                 <!--=================-->
                 <div class="roll-top"><span>古城动态</span><a href="javascript:">更多 > </a></div>
@@ -49,15 +51,9 @@
                 <div class="Lj-news">
                     <div class="news">
                         <ul>
-                            <li><img src="../../../assets/front/images/icon_01_38.jpg"/><a href="javascript:">召开局党组扩大会议暨拍砖会意见建议交</a></li>
-                            <li><img src="../../../assets/front/images/icon_01_38.jpg"/><a href="javascript:">召开局党组扩大会议暨拍砖会意见建议交</a></li>
-                            <li><img src="../../../assets/front/images/icon_01_38.jpg"/><a href="javascript:">云岭职工跨越发展先锋活动暨云岭职工人才工程示范点</a>
+                            <li v-for="temp in type23">
+                                <img src="../../../assets/front/images/icon_01_38.jpg"/><a href="javascript:">{{ temp.article_title }}</a>
                             </li>
-                            <li><img src="../../../assets/front/images/icon_01_38.jpg"/><a href="javascript:">召开局党组扩大会议暨拍砖会意见建议交</a></li>
-                            <li><img src="../../../assets/front/images/icon_01_38.jpg"/><a href="javascript:">召开局党组扩大会议暨拍砖会意见建议交</a></li>
-                            <li><img src="../../../assets/front/images/icon_01_38.jpg"/><a href="javascript:">召开局党组扩大会议暨拍砖会意见建议交</a></li>
-                            <li><img src="../../../assets/front/images/icon_01_38.jpg"/><a href="javascript:">召开局党组扩大会议暨拍砖会意见建议交</a></li>
-                            <li><img src="../../../assets/front/images/icon_01_38.jpg"/><a href="javascript:">召开局党组扩大会议暨拍砖会意见建议交</a></li>
                         </ul>
                     </div>
                     <div class="news-flash">
@@ -366,3 +362,34 @@
 
 </body>
 </html>
+<script>
+    new Vue({
+        el: '#app1',
+        data: {
+            fee:'',
+            message: ''
+        },
+        methods: {
+            getFee: function () {
+                apiUrl = "getArticlesByType.action?articleType_id=15";
+                this.$http.get(apiUrl)
+                        .then(function (response) {
+                            console.info( response.data)
+                            this.$set('fee', response.data);
+                        })
+            },
+            getMessage: function () {
+                apiUrl = "getArticlesByType.action?articleType_id=20";
+                this.$http.get(apiUrl)
+                        .then(function (response) {
+                            console.info( response.data)
+                            this.$set('message', response.data);
+                        })
+            }
+        },
+        ready: function () {
+            this.getFee()//调用其他方法
+            this.getMessage()
+        }
+    })
+</script>

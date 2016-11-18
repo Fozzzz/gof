@@ -10,6 +10,7 @@ import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Administrator on 2016/11/12.
@@ -26,4 +27,12 @@ public interface ArticleDao {
     ArrayList<Article> getArticles();
     @Select("select * from article where article_id=#{article_id}")
     Article getArticle(Article article);
+
+    /**
+     * 根据类型查找文章
+     * @param articleType_id
+     * @return
+     */
+    @Select("select * from article where articleType_id=#{articleType_id}")
+    List<Article> getArticlesByType(Integer articleType_id);
 }
