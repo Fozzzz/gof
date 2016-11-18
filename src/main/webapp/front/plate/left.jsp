@@ -9,6 +9,8 @@
 <html>
 <head>
     <title>Title</title>
+    <script src="http://static.runoob.com/assets/vue/1.0.11/vue.min.js"></script>
+    <script src="../First/vue-resource.min.js"></script>
 </head>
 <body>
 <!--left begin-->
@@ -17,18 +19,11 @@
     <!--========================-->
     <div class="Lj-cost">
         <span><img src="../../../assets/front/images/icon_01_22.jpg"/></span>
-        <div class="Lj-roll">
+        <div class="Lj-roll" id="app">
             <ul>
-                <li><img src="../../../assets/front/images/icon_01_23.png"/><a href="javascript:">丽江古城维护费</a></li>
-                <li><img src="../../../assets/front/images/icon_01_23.png"/><a href="javascript:">丽江古城维护费征收的法律政策依据</a></li>
-                <li><img src="../../../assets/front/images/icon_01_23.png"/><a href="javascript:">丽江古城维护费的收费标准</a></li>
-                <li><img src="../../../assets/front/images/icon_01_23.png"/><a href="javascript:">丽江古城维护费免征对象</a></li>
-                <li><img src="../../../assets/front/images/icon_01_23.png"/><a href="javascript:">丽江古城维护费征收方式</a></li>
-                <li><img src="../../../assets/front/images/icon_01_23.png"/><a href="javascript:">丽江古城维护费的管理使用原则</a></li>
-                <li><img src="../../../assets/front/images/icon_01_23.png"/><a href="javascript:">对偷逃规避古城维护费征收的行政处罚</a></li>
-                <li><img src="../../../assets/front/images/icon_01_23.png"/><a href="javascript:">丽江古城维护费征收工作综合整治行动</a></li>
-                <li><img src="../../../assets/front/images/icon_01_23.png"/><a href="javascript:">丽江古城维护费票据抽奖办法（试行）</a></li>
-                <li><img src="../../../assets/front/images/icon_01_23.png"/><a href="javascript:">关于对《丽江古城维护费票据抽奖办法< 试行>》有关问题的解释 </a></li>
+                <li v-for="temp in fee">
+                    <img src="../../../assets/front/images/icon_01_23.png"/><a href="javascript:">{{ temp.article_title }}</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -46,10 +41,9 @@
         <span><img src="../../../assets/front/images/img_01_09.jpg"/></span>
         <div class="Lj-trends">
             <ul>
-                <li><a href="javascript:">22:16 还有两个小时就要走了，已经数不清来了多少次，每一次的感已经数不</a></li>
-                <li><a href="javascript:">22:16 还有两个小时就要走了，已经数不清来了多少次，每一次的感已经数不</a></li>
-                <li><a href="javascript:">22:16 还有两个小时就要走了，已经数不清来了多少次，每一次的感已经数不</a></li>
-                <li><a href="javascript:">22:16 还有两个小时就要走了，已经数不清来了多少次，每一次的感已经数不</a></li>
+                <li v-for="temp in message">
+                    <a href="javascript:">{{temp.article_title}}</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -66,3 +60,34 @@
 </div>
 </body>
 </html>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            fee:'',
+            message: ''
+        },
+        methods: {
+            getFee: function () {
+                apiUrl = "getArticlesByType.action?articleType_id=15";
+                this.$http.get(apiUrl)
+                        .then(function (response) {
+                            console.info( response.data)
+                            this.$set('fee', response.data);
+                        })
+            },
+            getMessage: function () {
+                apiUrl = "getArticlesByType.action?articleType_id=20";
+                this.$http.get(apiUrl)
+                        .then(function (response) {
+                            console.info( response.data)
+                            this.$set('message', response.data);
+                        })
+            }
+        },
+        ready: function () {
+            this.getFee()//调用其他方法
+            this.getMessage()
+        }
+    })
+</script>

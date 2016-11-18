@@ -51,4 +51,8 @@ public class ArticleService {
     public void putArticle(Article article) {
         articleDao.put(article);
     }
+
+    public List<Article> getArticlesByType(Integer articleType_id) {
+        return articleDao.getArticlesByType(articleType_id);
+    }
 }
