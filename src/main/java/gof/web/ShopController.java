@@ -19,6 +19,7 @@ public class ShopController {
 
     @RequestMapping("/get.action")
     public String get(Page page, Model model){
+        page.setPageNumber(4);
         page=shopService.get(page);
         model.addAttribute("page",page);
         return "../front/Second/Lj-Shop";
