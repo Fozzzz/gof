@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.List;
+
 /**
  * Created by Administrator on 2016/11/15.
  */
@@ -36,8 +38,8 @@ public class ShopServiceTest {
 
     @Test
     public void testPut() {
-        Shop shop = new Shop(null, "123456", "123456", "123456", "2131");
-        int i = shopService.post(shop);
+        Shop shop = new Shop(5, "ssssss", "ssssssss", "sss", "ssssss");
+        int i = shopService.put(shop);
         Assert.assertEquals(1, i);
     }
 
@@ -50,6 +52,20 @@ public class ShopServiceTest {
         Assert.assertEquals(5, page.getList().size());
     }
 
+    @Test
+    public void testGetBack() {
+
+        List<Shop> back = shopService.getBack();
+        Assert.assertNotNull(back);
+    }
+
+    @Test
+    public void testGetOne() {
+        Shop shop=new Shop();
+        shop.setShop_id(1);
+        shop = shopService.getOne(shop);
+        Assert.assertNotNull(shop);
+    }
 }
 
 

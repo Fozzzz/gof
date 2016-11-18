@@ -4,7 +4,6 @@ import gof.dao.ShopDao;
 import gof.dao.WareDao;
 import gof.entity.Page;
 import gof.entity.Shop;
-import gof.entity.Ware.Ware;
 import gof.service.ShopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -47,5 +46,14 @@ public class ShopServiceImpl implements ShopService{
         }
         page.setList(shops);
         return page;
+    }
+    public List<Shop> getBack(){
+        List<Shop>  result=shopDao.getBack();
+        return result;
+    }
+
+    public Shop getOne(Shop shop) {
+       shop = shopDao.getOne(shop);
+        return shop;
     }
 }

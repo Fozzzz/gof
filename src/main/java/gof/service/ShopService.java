@@ -4,6 +4,8 @@ import gof.entity.Page;
 import gof.entity.Shop;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 /**
  * Created by Administrator on 2016/11/15.
  */
@@ -42,5 +44,17 @@ public interface ShopService {
      */
 
     public Page get(Page page);
+
+    /**后台不分页查询
+     * 
+     * @return
+     */
+    public List<Shop> getBack();
+
+    /**
+     * 后台得到一条商店信息
+     * @return
+     */
+    public  Shop getOne(Shop shop);
 
 }
