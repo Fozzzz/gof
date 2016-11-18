@@ -178,8 +178,9 @@ public class ArticleController {
      * @return
      */
     @RequestMapping(value = "/getArticle.action")
-    public String getArticlesByType(Integer article_id) {
-//        return articleService.getArticlesByType(articleType_id,pageNumber);
-        return "";
+    public String getArticlesByType(Model model,Article article) {
+        article = articleService.getArticle(article);
+        model.addAttribute("article",article);
+        return "front/Three/Lj-NewList-Minute";
     }
 }
