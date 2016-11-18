@@ -9,13 +9,13 @@ import java.util.List;
  */
 
 public class Shop {
-    private Integer shop_id;//
-    private String shop_name;
-    private String shop_address;
-    private String shop_tel;
-    private String shop_content;
-    private String shop_picture;
-    private List<Ware> wares;
+    private Integer shop_id;//商家编号
+    private String shop_name;//商家名字
+    private String shop_address;//商家地址
+    private String shop_tel;//商家电话
+    private String shop_content;//商家简介
+    private String shop_picture;//商家图片
+    private List<Ware> wares;//商家里面的商品
 
     public Shop() {
     }
