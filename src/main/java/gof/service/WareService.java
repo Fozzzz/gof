@@ -25,4 +25,7 @@ public class WareService {
     public void putWare(Ware ware){
         wareDao.put(ware);
     }
+    public void postWare(Ware ware){
+        wareDao.post(ware);
+    }
 }
