@@ -13,7 +13,6 @@
                 <div class="portlet-body form">
 
                     <div class="form-body">
-                        <input type="hidden" name="shop_id" >
                         <input type="hidden" name="shop_id" value="${shop.shop_id}">
                         <label class="control-label">名称</label>
 

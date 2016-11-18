@@ -82,8 +82,8 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown dropdown-fw "<c:if test="${subpage.equals('shop_list')||subpage.equals('shop_add')}">active open selected</c:if>">
-                            <a href="javascript:;" class="text-uppercase">
+                        <li class="dropdown dropdown-fw <c:if test="${subpage.equals('shop_list')||subpage.equals('shop_add')}">active open selected</c:if>">
+                            <a href="getShops.do" class="text-uppercase">
                                 <i class="icon-puzzle"></i> 商家管理 </a>
                             <ul class="dropdown-menu dropdown-menu-fw">
                                 <li <c:if test="${subpage.equals('shop_list')}">class="active"</c:if>>
@@ -97,7 +97,7 @@
                             </ul>
                         </li>
                         <li class="dropdown dropdown-fw <c:if test="${subpage.equals('ware_list')||subpage.equals('ware_add')}">active open selected</c:if>">
-                            <a href="javascript:;" class="text-uppercase">
+                            <a href="getWares.do" class="text-uppercase">
                                 <i class="icon-puzzle"></i> 商品管理 </a>
                             <ul class="dropdown-menu dropdown-menu-fw">
                                 <li <c:if test="${subpage.equals('ware_list')}">class="active"</c:if>>
