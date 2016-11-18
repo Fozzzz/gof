@@ -1,4 +1,6 @@
-package gof.entity;
+package gof.entity.article;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.*;
 
@@ -6,6 +8,7 @@ public class Article {
    public Integer article_id;
    public String article_title;
    public String article_content;
+   @DateTimeFormat(pattern = "yyyy-MM-dd")
    public Date article_date;
    
    public Integer articleType_id;

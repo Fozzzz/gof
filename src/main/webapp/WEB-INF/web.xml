@@ -5,6 +5,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
+    <!--spring-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:spring.xml</param-value>
@@ -13,6 +14,7 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
+    <!--中文乱码过滤器-->
     <filter>
         <filter-name>encodingFilter</filter-name>
         <filter-class>
@@ -29,9 +31,23 @@
     </filter>
     <filter-mapping>
         <filter-name>encodingFilter</filter-name>
-        <url-pattern>/gof/*</url-pattern>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>*.action</url-pattern>
     </filter-mapping>
 
+    <filter>
+        <filter-name>sessionFilter</filter-name>
+        <filter-class>gof.filter.SessionFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>sessionFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
+
+    <!--spring-mvc-->
     <servlet>
         <servlet-name>gof</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -46,7 +62,13 @@
         <servlet-name>gof</servlet-name>
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>gof</servlet-name>
+        <url-pattern>*.action</url-pattern>
+    </servlet-mapping>
 
+    <welcome-file-list>
+        <welcome-file>index.action</welcome-file>
+    </welcome-file-list>
 
 </web-app>
-        

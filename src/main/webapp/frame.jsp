@@ -50,20 +50,25 @@
                         <div class="btn-group-img btn-group">
                             <button type="button" class="btn btn-sm dropdown-toggle" data-toggle="dropdown"
                                     data-hover="dropdown" data-close-others="true">
-                                <span>你好,管理员</span>
+                                <span>你好,${admin}</span>
                                 <%--管理员头像--%>
                                 <img src="../assets/layouts/layout5/img/avatar1.jpg" alt=""></button>
                         </div>
                         <%--退出按钮--%>
-                        <button type="button" class="quick-sidebar-toggler" data-toggle="collapse">
+                        <button class="quick-sidebar-toggler" data-toggle="collapse" onclick="logout()">
                             <i class="icon-logout"></i>
                         </button>
+                        <script>
+                            function logout(){
+                                location.href="logout.do";
+                            }
+                        </script>
                     </div>
                 </div>
                 <%--功能模块列表--%>
                 <div class="nav-collapse collapse navbar-collapse navbar-responsive-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="dropdown dropdown-fw  active open selected">
+                        <li class="dropdown dropdown-fw <c:if test="${subpage.equals('article_list')||subpage.equals('article_add')}">active open selected</c:if> ">
                             <a href="getArticles.do" class="text-uppercase">
                                 <i class="icon-home"></i> 文章管理 </a>
                             <ul class="dropdown-menu dropdown-menu-fw">
@@ -77,35 +82,35 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown dropdown-fw  ">
-                            <a href="javascript:;" class="text-uppercase">
+                        <li class="dropdown dropdown-fw <c:if test="${subpage.equals('shop_list')||subpage.equals('shop_add')}">active open selected</c:if>">
+                            <a href="getShops.do" class="text-uppercase">
                                 <i class="icon-puzzle"></i> 商家管理 </a>
                             <ul class="dropdown-menu dropdown-menu-fw">
-                                <li class="active">
-                                    <a href="article_list.html">
-                                        <i class="icon-bar-chart"></i> 商家列表 </a>
+                                <li <c:if test="${subpage.equals('shop_list')}">class="active"</c:if>>
+                                    <a href="getShops.do">
+                                            <i class="icon-bar-chart"></i> 商家列表 </a>
                                 </li>
-                                <li>
-                                    <a href="article_add.html">
+                                <li <c:if test="${subpage.equals('shop_add')}">class="active"</c:if>>
+                                    <a href="postShop.do">
                                         <i class="icon-bulb"></i> 添加商家 </a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown dropdown-fw  ">
-                            <a href="javascript:;" class="text-uppercase">
+                        <li class="dropdown dropdown-fw <c:if test="${subpage.equals('ware_list')||subpage.equals('ware_add')}">active open selected</c:if>">
+                            <a href="getWares.do" class="text-uppercase">
                                 <i class="icon-puzzle"></i> 商品管理 </a>
                             <ul class="dropdown-menu dropdown-menu-fw">
-                                <li class="active">
-                                    <a href="article_list.html">
+                                <li <c:if test="${subpage.equals('ware_list')}">class="active"</c:if>>
+                                    <a href="getWares.do">
                                         <i class="icon-bar-chart"></i> 商品列表 </a>
                                 </li>
-                                <li>
-                                    <a href="article_add.html">
+                                <li <c:if test="${subpage.equals('ware_add')}">class="active"</c:if>>
+                                    <a href="postWare.do">
                                         <i class="icon-bulb"></i> 添加商品 </a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown dropdown-fw  ">
+                        <li class="dropdown dropdown-fw">
                             <a href="javascript:;" class="text-uppercase">
                                 <i class="icon-puzzle"></i> 订单管理 </a>
                             <ul class="dropdown-menu dropdown-menu-fw">

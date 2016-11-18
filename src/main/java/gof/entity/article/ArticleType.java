@@ -1,4 +1,4 @@
-package gof.entity;
+package gof.entity.article;
 
 import java.util.*;
 

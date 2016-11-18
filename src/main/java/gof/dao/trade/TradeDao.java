@@ -1,7 +1,7 @@
 package gof.dao.trade;
 
 
-import gof.entity.Article;
+import gof.entity.article.Article;
 import gof.entity.Page;
 import gof.entity.trade.Party;
 import gof.entity.trade.Trade;
