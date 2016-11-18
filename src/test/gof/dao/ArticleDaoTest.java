@@ -1,5 +1,5 @@
 package gof.dao;
-import gof.entity.Article;
+import gof.entity.article.Article;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

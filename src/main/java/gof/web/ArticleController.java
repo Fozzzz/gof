@@ -1,20 +1,16 @@
 package gof.web;
 
-import gof.dao.ArticleDao;
-import gof.entity.Article;
-import gof.entity.ArticleType;
+import gof.entity.article.Article;
+import gof.entity.article.ArticleType;
 import gof.entity.Page;
 import gof.entity.User.User;
 import gof.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.SessionAttributes;
-import org.springframework.web.context.annotation.SessionScope;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
@@ -66,7 +62,7 @@ public class ArticleController {
     @RequestMapping("/getArticles.do")
     public String getArticles(Page page, Model model, HttpSession session,ArticleType articleType) {
 
-        if(articleType==null){
+        if(articleType==null||articleType.getArticleType_id()==null){
             articleType=new ArticleType();
             articleType.setArticleType_id(15);
         }

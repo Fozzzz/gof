@@ -1,8 +1,7 @@
 package gof.dao;
 
-import gof.entity.Article;
-import gof.entity.ArticleType;
-import gof.entity.Page;
+import gof.entity.article.Article;
+import gof.entity.article.ArticleType;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
 

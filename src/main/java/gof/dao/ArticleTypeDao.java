@@ -1,7 +1,6 @@
 package gof.dao;
 
-import gof.entity.Article;
-import gof.entity.ArticleType;
+import gof.entity.article.ArticleType;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
