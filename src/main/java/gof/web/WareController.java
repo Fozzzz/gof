@@ -24,20 +24,15 @@ public class WareController {
         return "frame";
     }
     @RequestMapping(value = "/postWare.do",method = RequestMethod.POST)
-    public String post(Ware ware){
+    public String post(Model model,Ware ware){
         wareService.postWare(ware);
+        getWares(model);
         return "frame";
     }
     @RequestMapping("/putWare.do")
-    public String put(Ware ware){
-        System.out.println(ware.getWare_name());
-        System.out.println(ware.getWare_wifi());
+    public String put(Model model,Ware ware){
         wareService.putWare(ware);
-        return "frame";
-    }
-    @RequestMapping("/deleteWare.do")
-    public String delete(Ware ware){
-
+        getWares(model);
         return "frame";
     }
     @RequestMapping("/getWares.do")
@@ -59,6 +54,12 @@ public class WareController {
         ware=wareService.getWare(ware.getWare_id());
         model.addAttribute("ware",ware);
         model.addAttribute("subpage","ware_edit");
+        return "frame";
+    }
+    @RequestMapping("/deleteWare.do")
+    public String delete(Model model,Ware ware){
+        wareService.deleteWare(ware);
+        getWares(model);
         return "frame";
     }
 }

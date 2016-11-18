@@ -28,4 +28,7 @@ public class WareService {
     public void postWare(Ware ware){
         wareDao.post(ware);
     }
+    public void deleteWare(Ware ware){
+        wareDao.delete(ware);
+    }
 }
