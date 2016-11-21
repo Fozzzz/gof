@@ -1,7 +1,6 @@
 package gof.dao.trade;
 
 
-import gof.entity.article.Article;
 import gof.entity.Page;
 import gof.entity.trade.Party;
 import gof.entity.trade.Trade;
@@ -11,7 +10,6 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

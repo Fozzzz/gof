@@ -10,9 +10,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.Date;
-import java.util.List;
-
 /**
  * Created by Administrator on 2016/11/14.
  */
@@ -24,6 +21,7 @@ public class TradeController {
     private TradeDao tradeDao;
 
 
+    //分页
     @RequestMapping("/getLimit.do")
     public String getLimit(Page page, Model model) {
         model.addAttribute("page", tradeService.getLimit(page));
@@ -36,6 +34,13 @@ public class TradeController {
         return getLimit(page, model);
     }
 
+
+    @RequestMapping("/update.do")
+    public String update(Party party, Page page, Model model) {
+        tradeDao.putP(party);
+        return getLimit(page, model);
+    }
+
 //    @RequestMapping("/add.do")
 //    public String add(Trade trade, Page page, Model model) {
 //        if (trade.getParty()!=null) {
@@ -44,6 +49,7 @@ public class TradeController {
 //        return getLimit(page, model);
 //    }
 
+    //前台添加
     @RequestMapping("/add.action")
     public String add(Trade trade, Model model) {
         if (trade.getParty()!=null) {
@@ -53,12 +59,6 @@ public class TradeController {
             model.addAttribute("trade",trade);
         }
         return "front/Online/Online_inquiry";
-    }
-
-    @RequestMapping("/update.do")
-    public String update(Party party, Page page, Model model) {
-        tradeDao.putP(party);
-        return getLimit(page, model);
     }
 
 

@@ -2,7 +2,6 @@ package gof.dao;
 
 import gof.dao.trade.TradeDao;
 import gof.entity.Page;
-import gof.entity.trade.Party;
 import gof.entity.trade.Trade;
 import org.junit.Assert;
 import org.junit.Test;
@@ -11,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import java.util.Date;
 import java.util.List;
 
 /**
