@@ -44,14 +44,12 @@ public class TradeController {
 //        return getLimit(page, model);
 //    }
 
-    @RequestMapping("/add.do")
+    @RequestMapping("/add.action")
     public String add(Trade trade, Model model) {
         if (trade.getParty()!=null) {
-            tradeService.post(trade);
-
             trade.setTrade_firstDate("2015-11-11");
             trade.setTrade_lastDate("2016-11-11");
-
+            tradeService.post(trade);
             model.addAttribute("trade",trade);
         }
         return "front/Online/Online_inquiry";

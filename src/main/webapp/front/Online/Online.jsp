@@ -104,7 +104,7 @@
               <input type="text" class="online_num" id="online" value="1"/><a onclick="changeAdd()"
                                                                               href="javascript:"><img
                           src="../../../assets/front/images/icon_08_15.jpg"/></a></span>
-                    <form action="/gof/add.do" method="post">
+                    <form action="/gof/add.action" method="post">
                         <dl>
                             <dt>
                             <p>取票电话</p><input type="text" class="online_check" name="trade_tel"/></dt>
