@@ -55,18 +55,20 @@
 
 
                 <div class="online">
+                    <form action="/gof/select.action" method="post">
                     <div class="online_title">
                         <p>订单查询</p>
                         <dl>
                             <dt>证件号码</dt>
-                            <dd><input type="text" value="" class="online_input"/></dd>
+                            <dd><input type="text" name="party_idcard" class="online_input"/></dd>
                         </dl>
                         <dl>
                             <dt>取票电话</dt>
-                            <dd><input type="text" value="" class="online_input"/></dd>
+                            <dd><input type="text" name="trade_tel" class="online_input"/></dd>
                         </dl>
-                        <a href="javascript:">查询</a>
+                        <input type="submit" value="查询"></a>
                     </div>
+                    </form>
                 </div>
 
                 <div class="online_inquiry">

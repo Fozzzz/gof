@@ -52,8 +52,15 @@ public class TradeService {
         }
     }
 
-    public List<Trade> getTrade(Trade trade) {
-        List<Trade> all = tradeDao.getAll();
-        return all;
+//    public List<Trade> getTrade(Trade trade) {
+//        List<Trade> all = tradeDao.getAll();
+//        return all;
+//    }
+
+    public Trade select(int trade_tel,int party_idcard) {
+        Trade trade = tradeDao.getSelect(trade_tel);
+        List<Party> party=tradeDao.getSelect1(party_idcard);
+        trade.setParty(party);
+        return trade;
     }
 }

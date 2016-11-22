@@ -4,10 +4,7 @@ package gof.dao.trade;
 import gof.entity.Page;
 import gof.entity.trade.Party;
 import gof.entity.trade.Trade;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -34,6 +31,14 @@ public interface TradeDao {
     //查询所有
     @Select("select * from trade t RIGHT JOIN party p on p.party_trade=t.trade_id")
     List<Trade> getAll();
+    //界面上通过证件号码，取票电话查询
+    @Select("select * from trade t  WHERE t.trade_tel=#{trade_tel}")
+//    @ResultType(userRM)
+    Trade getSelect(int trade_tel);
+
+    @Select("select * from party p  WHERE p.party_idcard=#{party_idcard}")
+//    @ResultType(userRM)
+    List<Party> getSelect1(int trade_tel);
 
 
     /***

@@ -2,6 +2,7 @@ package gof.dao;
 
 import gof.dao.trade.TradeDao;
 import gof.entity.Page;
+import gof.entity.trade.Party;
 import gof.entity.trade.Trade;
 import org.junit.Assert;
 import org.junit.Test;
@@ -63,5 +64,13 @@ public class TradeDaoTest {
     public void test(){
         List<Trade> list=tradeDao.getAll();
         Assert.assertNotNull(list);
+    }
+
+    @Test
+    public void test1(){
+     Trade trade=tradeDao.getSelect(1345);
+    List<Party> party=tradeDao.getSelect1(454564565);
+        trade.setParty(party);
+        Assert.assertNotNull(trade);
     }
 }

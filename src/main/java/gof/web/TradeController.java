@@ -60,6 +60,13 @@ public class TradeController {
         }
         return "front/Online/Online_inquiry";
     }
+    //前台查询
+    @RequestMapping("/select.action")
+    public String select(int trade_tel,int party_idcard, Model model) {
+        Trade trade1 = tradeService.select(trade_tel,party_idcard);
+        model.addAttribute("trade",trade1);
+        return "front/Online/Online_inquiry";
+    }
 
 
 }
