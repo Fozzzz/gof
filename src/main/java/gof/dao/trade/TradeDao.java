@@ -23,35 +23,33 @@ public interface TradeDao {
     @Select("select * from party p limit #{currentNumber},#{pageNumber}")
     List<Party> getLimit(Page page);
     //查询用户
-    @Select("select * from party p ")
-    List<Party> getPAll();
+    @Select("select * from party p where p.party_trade=#{id} ")
+    List<Party> getPAll(int id);
     //查询订单
     @Select("select * from trade t")
     List<Trade> getTAll();
-    //查询所有
-    @Select("select * from trade t RIGHT JOIN party p on p.party_trade=t.trade_id")
-    List<Trade> getAll();
     //界面上通过证件号码，取票电话查询
     @Select("select * from trade t  WHERE t.trade_tel=#{trade_tel}")
-//    @ResultType(userRM)
     Trade getSelect(int trade_tel);
-
     @Select("select * from party p  WHERE p.party_idcard=#{party_idcard}")
-//    @ResultType(userRM)
-    List<Party> getSelect1(int trade_tel);
-
+    List<Party> getSelect1(int party_idcard);
+    //通过id查找用户
+    @Select("select * from party p  WHERE p.party_id=#{party_id}")
+    List<Party> getSelect2(int party_id);
+    @Select("select * from party p LEFT JOIN trade t on p.party_trade=t.trade_id WHERE p.party_id=#{party_id}")
+    Trade getSelect3(int party_id);
 
     /***
      *删除
-     * @param p_id
+     * @param trade_id
      * @return
      */
     //删除用户
-    @Delete("delete from party  where party_id=#{party_id}")
-    int deleteP(Integer p_id);
+    @Delete("delete  from party  where party_trade=#{trade_id}")
+    int deleteP(Integer trade_id);
     //删除订单
-    @Delete("delete from trade  where trade_id=#{trade_id}")
-    int deleteT(Integer t_id);
+    @Delete("delete  from trade  where trade_id=#{trade_id}")
+    int deleteT(Integer trade_id);
 
     /***
      *更新
@@ -59,8 +57,11 @@ public interface TradeDao {
      * @return
      */
     //更新用户
-    @Update("update party set party_id=#{party_id},party_name=#{party_name},party_idcard=#{party_idcard} where party_id=#{party_id}")
+    @Update("update party p set p.party_name=#{party_name},p.party_idcard=#{party_idcard} where p.party_id=#{party_id}")
     int putP(Party party);
+    //更新电话
+    @Update("update party p LEFT JOIN trade t on p.party_trade=t.trade_id set t.trade_tel=#{trade_tel} where p.party_id=#{party_id}")
+    int putT(@Param("trade_tel") String  trade_tel,@Param("party_id") int party_id);
 
     /***
      *

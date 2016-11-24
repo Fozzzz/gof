@@ -16,27 +16,16 @@ import java.util.List;
 public class TradeService {
     @Autowired
     private TradeDao tradeDao;
-//    public int delete(Integer u_id){
-//        int delete = tradeDao.deleteP(u_id);
-//        return delete;
-//    }
-//    public boolean put(Party party){
-//        int put = tradeDao.putP(party);
-//        if(put==1){
-//            return true;
-//        }else{
-//            return false;
-//        }
-//    }
-//    public int post(Party party){
-//        int i = tradeDao.postP(party);
-//        return i;
-//    }
+    //分页初始化
     public Page getLimit(Page page){
         page.setCurrentPage(page.getCurrentPage());
-        List<Trade> limit = tradeDao.getAll();
+        List<Trade> limit = tradeDao.getTAll();
+        for (Trade trade:limit) {
+            List<Party> pAll = tradeDao.getPAll(trade.getTrade_id());
+            trade.setParty(pAll);
+        }
         page.setList(limit);
-        page.setTotalNumber(tradeDao.getPAll().size());
+        page.setTotalNumber(tradeDao.getTAll().size());
         page.init();
         return page;
     }
@@ -44,19 +33,12 @@ public class TradeService {
     public void post(Trade trade) {
         //添加trade
         tradeDao.postT(trade);
-
         //添加party
         List<Party> partys=trade.getParty();
         for (Party party: partys) {
             tradeDao.postP(party);
         }
     }
-
-//    public List<Trade> getTrade(Trade trade) {
-//        List<Trade> all = tradeDao.getAll();
-//        return all;
-//    }
-
     public Trade select(int trade_tel,int party_idcard) {
         Trade trade = tradeDao.getSelect(trade_tel);
         List<Party> party=tradeDao.getSelect1(party_idcard);

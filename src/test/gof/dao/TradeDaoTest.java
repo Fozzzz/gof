@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -23,21 +24,27 @@ public class TradeDaoTest {
     private TradeDao tradeDao;
     @Test
     public void testDeleteT(){
-       Integer t_id=2;
-        int i=tradeDao.deleteT(t_id);
+       Integer trade_id=1;
+        int i=tradeDao.deleteT(trade_id);
         System.out.println(i);
     }
 
     @Test
     public void testDeleteP(){
         Integer t_id=4;
-        int i=tradeDao.deleteP(t_id);
+        tradeDao.deleteP(t_id);
+        int i=tradeDao.deleteT(t_id);
         System.out.println(i);
     }
     @Test
     public void testUpdete(){
-        Party party=new Party(5,"滔","123456");
-        int i=tradeDao.putP(party);
+        Party party=new Party(6,"滔","123456");
+        Trade trade=new Trade();
+        trade.setTrade_tel("12345");
+        List<Party> parties=new ArrayList<Party>();
+        parties.add(party);
+        trade.setParty(parties);
+        int i=tradeDao.putT(trade.getTrade_tel(),trade.getParty().get(0).getParty_id());
         System.out.println(i);
     }
 
@@ -62,7 +69,7 @@ public class TradeDaoTest {
 
     @Test
     public void test(){
-        List<Trade> list=tradeDao.getAll();
+        List<Trade> list=tradeDao.getTAll();
         Assert.assertNotNull(list);
     }
 
@@ -72,5 +79,13 @@ public class TradeDaoTest {
     List<Party> party=tradeDao.getSelect1(454564565);
         trade.setParty(party);
         Assert.assertNotNull(trade);
+    }
+
+    @Test
+    public void test2(){
+        List<Party> p = tradeDao.getSelect2(1);
+        Trade t=tradeDao.getSelect3(2);
+        Assert.assertNotNull(p);
+        Assert.assertNotNull(t);
     }
 }

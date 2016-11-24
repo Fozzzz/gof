@@ -110,18 +110,18 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown dropdown-fw">
-                            <a href="javascript:;" class="text-uppercase">
+                        <li class="dropdown dropdown-fw <c:if test="${subpage.equals('Trade_list')||subpage.equals('Trade_add')}">active open selected</c:if>">
+                            <a href="getLimit.do" class="text-uppercase">
                                 <i class="icon-puzzle"></i> 订单管理 </a>
                             <ul class="dropdown-menu dropdown-menu-fw">
-                                <li class="active">
-                                    <a href="article_list.html">
+                                <li <c:if test="${subpage.equals('Trade_list')}">class="active"</c:if>>
+                                    <a href="getLimit.do">
                                         <i class="icon-bar-chart"></i> 订单列表 </a>
                                 </li>
-                                <li>
-                                    <a href="article_add.html">
-                                        <i class="icon-bulb"></i> 添加订单 </a>
-                                </li>
+                                <%--<li <c:if test="${subpage.equals('Trade_add')}">class="active"</c:if>>--%>
+                                    <%--<a href="add.do">--%>
+                                        <%--<i class="icon-bulb"></i> 添加订单 </a>--%>
+                                <%--</li>--%>
                             </ul>
                         </li>
                     </ul>
